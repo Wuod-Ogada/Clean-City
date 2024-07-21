@@ -6,35 +6,39 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="bg-teal-100 font-body">
-    <header class="bg-cyan-200"><!--Navigation bar -->
-        <div class="mx-7 flex justify-between items-center  ">
-						<!--Logo and Menu Icon-->
-            			<a><img class="w-20" src="./images/logo.png" alt="Logo"></a>
+    <header class="bg-cyan-200" ><!--Navigation bar -->
+        <div class="mx-7 lg:flex lg:justify-between items-center ">
+						<div class="flex items-center justify-between relative w-full lg:w-20 "><!--Logo and Menu Icon-->
+							<a><img class="w-20" src="./images/logo.png" alt="Logo"></a>
 
-						<a href="" class="block lg:hidden" id="burger"><!--Menu burger Icon-->
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-							<path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-						</svg>
-						</a>
+							<a class="cursor-pointer lg:hidden" id="burger" onclick="openClose()"><!--Menu burger Icon-->
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+								<path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+							</svg>
+							</a><!--End of Menu burger Icon-->
+						</div>
 						
-            <div class="hidden  lg:flex lg:justify-between lg:float-left w-2/3" id="menu"><!--menulist-->
-							<div>
-                <ul class="text-teal-950 min-h-60vh lg:flex relative lg:float-left lg:space-x-2  ">
+            <div class="hidden justify-center w-2/3 lg:flex lg:justify-between items-center" id="menu"><!--menulist-->
+
+							<div class="w-2/3 justify-center">
+                <ul class="text-teal-950 lg:py-7 text-base lg:text-2xl lg:flex lg:justify-between lg:space-x-2 relative">
 									<li><a class="menulinks" href="">About Us</a></li>
-									<li><a class="menulinks" href="" id="containers">Containers+</a>
-										<ul class="hidden bg-cyan-200 absolute text-2xl mt-4 sm:flex-col" id="contList">
-											<li><a class="mb-4 hover:border-b hover: border-gray-600" href="">Roll-off Container</a></li>
-											<li><a class="mb-4 hover:border-b hover: border-gray-600" href="">Skip Bin</a></li>
-											<li><a class="mb-4 hover:border-b hover: border-gray-600" href="">Compactors</a></li>
+									<li><input type="checkbox" name="containers" id="containers" class="hidden peer"><label class="menulinks relative left-0" for="containers" href="" >Containers+</label>
+										<div class="bg-cyan-200  text-xl mt-4 absolute h-0 overflow-hidden transition ease-in-out duration-500 peer-checked:h-full">
+											<ul>
+											<li><a class="hover:border-b hover: border-gray-600" href="">Roll-off Container</a></li>
+											<li><a class="hover:border-b hover: border-gray-600" href="">Skip Bin</a></li>
+											<li><a class="hover:border-b hover: border-gray-600" href="">Compactors</a></li>
 										</ul>
+									</div>
 									</li>
 									<li><a class="menulinks" href="">FAQs</a></li>
 									<li><a class="menulinks" href="">Contact Us</a></li>
 								</ul>
 							</div>
-						<a class=" lg:block items-center text-lg px-4 rounded-full bg-blue-300 cursor-pointer mr-9 hover:bg-slate-400">Sign In</a>				
+						<a class="lg:block items-center text-lg px-4 rounded-full bg-blue-300 cursor-pointer mr-9 hover:bg-slate-400">Sign In</a>				
             </div>
-            
+
         </div>
     </header><!--End of Navigation bar-->
     <section><!--Landing Page -->
@@ -66,67 +70,118 @@
 			</ul>
 			</div>
 		</section><!--End of Service provision section-->
-    <section>Slider</section><!--Slider images of container types and order-->
+   
+		<section class="">
+			<div class="slider_container width-full flex justify-center items-center md:space-between px-20"><!--Container Wrapper for Slider-->
+			
+			<div id="prev" onclick="show_container(-1)">
+				<a class="Previous relative left-0 items-center w-10" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+					<path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+				</svg>
+				</a><!--Previous Button-->
+			</div>
+
+			<div class="slider flex"><!--Start of Slider-->
+
+				<div id="image" class="">
+					<div class="card items-center md:flex overflow-hidden">
+							<div class="imageholder">
+								<img class="" src="./images/roll-on-off.png" alt="Roll-off Container">
+							</div>
+
+							<div class="description bg-cyan-200 rounded-md">
+								<div class="ml-5">
+									<ul class="py-3  text-lg">
+										<li>
+											<h6 class="font-semibold text-xl pl-3">Dimensions:</h6>
+											<p><strong>L:</strong>6m <strong>W:</strong>:2.5m <strong>H:</strong>1.2m</p>
+										</li>
+										<li>
+											<h6 class="font-semibold text-xl pl-3">Lease Period:</h6>
+											<p>This container is issued for 12days.</p>
+										</li>
+										<li>
+											<h6 class="font-semibold text-xl pl-3">Suitable for:</h6>
+											<p>It is suitable for most of refuse apart from Chemical based residue.</p>
+										</li>
+									</ul>
+								</div>
+								<div class="flex justify-between text-xl py-5 mx-6">
+								<a>Price: Sr.450</a>
+								<a class="cursor-pointer">Order</a>
+								</div>
+							</div><!--End of Description-->	
+					</div><!--End of Card-->
+				</div><!--End of Image 1-->
+
+		<!--<div class="image2">
+					<div class="card">Skip-bin</div>
+				</div>
+				<div class="image3">
+					<div class="card">Compactor</div>
+				</div>-->	
+			</div><!--End of Slider-->
+
+		<div id="next" onclick="show_container(1)">
+			<a class="Next relative right-0 items-center w-10">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+					<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+				</svg>					
+			</a><!--Next Button-->
+		</div>
+
+			</div>
+		</section><!--Slider images of container types and order-->
 
     <section class="my-12 w-full items-center justify-center"><!--Start of FAQs section-->
 			<div class="sm:w-auto md:w-3/5 m-auto bg-cyan-200 p-3 rounded-md"><!--FAQ container-->
 			<h3 class="text-3xl text-center pb-4 mb-4 border-b border-b-gray-500">FAQs</h3>
-				<div class="my-2">
-					<div class="topic" id="chevron"><p>Can the lease period be extended?</p><span class="w-7" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-					</span></div>
-					<div class="faqsentence hidden" id="response" ><p>The container lease period vary depending on the model. It is difficult to guarantee a lease extension. However, it can be negotitated.</p>
+
+			<div class="faqItems"><!--Questions Container-->
+				<div id="">
+					<div class="question " id="question"><p>Can the lease period be extended?</p><a class="w-9 rotate-0" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				</a></div>
+					<div class="answer hidden border-b border-b-green-950"><p class="py-5">The container lease period vary depending on the model. It is difficult to guarantee a lease extension. However, it can be negotitated.</p>
 					</div>
 				</div>
 				
-				<div class="relative">
-					<div class="topic" id="chevron"><p>Can a Full Container be Replaced?</p><span class="w-7" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-					</span></div>
-					<div class="faqsentence hidden" id="response"><p>We facilitate container replacement by taking the full containers, and placing an empty ones.</p></div>
-				</div>
-
-				<div class="">
-					<div class="topic" id="chevron"><p>Can the container be collected before the lease period ends?</p><span class="w-7" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-					</span></div>
-					<div class="faqsentence hidden" id="response"><p>Yes, the response we provide to our customers extends to your request to withdraw containers upon request.</p></div>
-				</div>
-
-				<div class="">
-					<div class="topic" id="chevron"><p>What can I do if the Municipality contacts me?</p><span class="w-7" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-					</span></div>
-					<div class="faqsentence hidden" id="response"><p>We highly advise our Customers to notify us in the event the Municipality contacts you regarding withdrawal of the container. This enables both the customer and organization avoid penalties.</p></div>
-				</div>
-
-				<div class="">
-					<div class="topic" id="chevron"><p>Can I request for multiple containers?</p><span class="w-7" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-					</span></div>
-					<div class="faqsentence hidden" id="response"><p>Yes. We can provide our customers with more than one container. Even if it is in multiple locations</p></div>
-				</div>
-
-				<div class="">
-					<div class="topic" id="chevron"><p>Can the container be relocated to a different location after delivery?</p><span class="w-7" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-					</span></div>
-					<div class="faqsentence hidden" id="response"><p>We have a one time placement policy. However, there are circumstances we as an organization compromise and facilitate repositioning, but not relocation.</p></div>
-				</div>
-
-				<div class="">
-					<div class="topic" id="chevron"><p>What kind of industrial waste do you dispose?</p><a class="w-7" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
+				<div id="quiz">
+					<div class="question"><p>Can a Full Container be Replaced?</p><a class="w-9" id="chevron1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="faqsentence hidden" id="response"><p>We do not facilitate the deposition of any chemical subsance, be it in powder or packaged. We only approve of wood and plastic materials.</p></div>
+					<div class="answer hidden" id="response"><p>We facilitate container replacement by taking the full containers, and placing an empty ones.</p></div>
 				</div>
+
+				<div id="quiz">
+					<div class="question"><p>Can the container be collected before the lease period ends?</p><a class="w-9 rotate-0" id="chevron2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				</a></div>
+					<div class="answer hidden" id="response"><p>Yes, the response we provide to our customers extends to your request to withdraw containers upon request.</p></div>
+				</div>
+
+				<div id="quiz">
+					<div class="question"><p>What can I do if the Municipality contacts me?</p><a class="w-9" id="chevron3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				</a></div>
+					<div class="answer hidden" id="response"><p>We highly advise our Customers to notify us in the event the Municipality contacts you regarding withdrawal of the container. This enables both the customer and organization avoid penalties.</p></div>
+				</div>
+
+				<div id="quiz">
+					<div class="question"><p>Can I request for multiple containers?</p><a class="w-9" id="chevron4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				</a></div>
+					<div class="answer hidden" id="response"><p>Yes. We can provide our customers with more than one container. Even if it is in multiple locations</p></div>
+				</div>
+
+				<div id="quiz">
+					<div class="question"><p>Can the container be relocated to a different location after delivery?</p><a class="w-9" id="chevron5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				</a></div>
+					<div class="answer hidden" id="response"><p>We have a one time placement policy. However, there are circumstances we as an organization compromise and facilitate repositioning, but not relocation.</p></div>
+				</div>
+
+				<div id="quiz">
+					<div class="question"><p>What kind of industrial waste do you dispose?</p><a class="w-9" id="chevron6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				</a></div>
+					<div class="answer hidden" id="response"><p>We do not facilitate the deposition of any chemical subsance, be it in powder or packaged. We only approve of wood and plastic materials.</p></div>
+				</div>
+			</div><!--End of Question Container-->
+
 			</div><!--FAQ container End-->
 		</section><!--End of FAQs Section-->
 
@@ -227,7 +282,7 @@
 						<img src="./images/user.png">
 					</div>
 					<div class="customerOpinion">
-						<p><em>I highly recommend to order from this company. They adhered to my plea for the need of a container urgently</em></p>
+						<p><em>I highly recommend to order from this company. They adhered to my plea for urgently needing a container at a construction site.</em></p>
 					</div>
 				</div>
 				<div class="feedback">
