@@ -18,14 +18,14 @@
 							</a><!--End of Menu burger Icon-->
 						</div>
 						
-            <div class="hidden justify-center w-2/3 lg:flex lg:justify-between items-center" id="menu"><!--menulist-->
+            <div class="hidden w-2/3 lg:flex lg:justify-between items-center" id="menu"><!--menulist-->
 
-							<div class="w-2/3 justify-center">
-                <ul class="text-teal-950 lg:py-7 text-base lg:text-2xl lg:flex lg:justify-between lg:space-x-2 relative">
+							<div class="justify-center items-center">
+                <ul class="text-teal-950 text-base lg:text-2xl lg:flex lg:justify-between lg:space-x-2">
 									<li><a class="menulinks" href="">About Us</a></li>
-									<li><input type="checkbox" name="containers" id="containers" class="hidden peer"><label class="menulinks relative left-0" for="containers" href="" >Containers+</label>
-										<div class="bg-cyan-200  text-xl mt-4 absolute h-0 overflow-hidden transition ease-in-out duration-500 peer-checked:h-full">
-											<ul>
+									<li><input type="checkbox" name="containers" id="containers" class="hidden peer"><label class="menulinks relative" for="containers" href="" >Containers+</label>
+										<div class="bg-cyan-200 text-xl mt-4 absolute h-0 overflow-hidden  peer-checked:h-[100px]">
+											<ul class="transition ease-in-out duration-700 py-2">
 											<li><a class="hover:border-b hover: border-gray-600" href="">Roll-off Container</a></li>
 											<li><a class="hover:border-b hover: border-gray-600" href="">Skip Bin</a></li>
 											<li><a class="hover:border-b hover: border-gray-600" href="">Compactors</a></li>
@@ -71,8 +71,8 @@
 			</div>
 		</section><!--End of Service provision section-->
    
-		<section class="">
-			<div class="slider_container width-full flex justify-center items-center md:space-between px-20"><!--Container Wrapper for Slider-->
+		<section class="my-100px">
+			<div class="slider_container w-full flex justify-center items-center py-[50px] md:px-20"><!--Container Wrapper for Slider-->
 			
 			<div id="prev" onclick="show_container(-1)">
 				<a class="Previous relative left-0 items-center w-10" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -81,7 +81,7 @@
 				</a><!--Previous Button-->
 			</div>
 
-			<div class="slider flex"><!--Start of Slider-->
+			<div class="slider flex w-[85%] md:px-[10px]"><!--Start of Slider-->
 
 				<div id="image" class="">
 					<div class="card items-center md:flex overflow-hidden">
@@ -89,8 +89,8 @@
 								<img class="" src="./images/roll-on-off.png" alt="Roll-off Container">
 							</div>
 
-							<div class="description bg-cyan-200 rounded-md">
-								<div class="ml-5">
+							<div class="description bg-cyan-200 rounded-md ">
+								<div class="ml-5 hidden md:block">
 									<ul class="py-3  text-lg">
 										<li>
 											<h6 class="font-semibold text-xl pl-3">Dimensions:</h6>
@@ -107,7 +107,7 @@
 									</ul>
 								</div>
 								<div class="flex justify-between text-xl py-5 mx-6">
-								<a>Price: Sr.450</a>
+								<a>Price:<span class="font-semibold">Sr.450</span></a>
 								<a class="cursor-pointer">Order</a>
 								</div>
 							</div><!--End of Description-->	
@@ -137,48 +137,48 @@
 			<div class="sm:w-auto md:w-3/5 m-auto bg-cyan-200 p-3 rounded-md"><!--FAQ container-->
 			<h3 class="text-3xl text-center pb-4 mb-4 border-b border-b-gray-500">FAQs</h3>
 
-			<div class="faqItems"><!--Questions Container-->
-				<div id="">
-					<div class="question " id="question"><p>Can the lease period be extended?</p><a class="w-9 rotate-0" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+			<div class="faq"><!--Questions Container-->
+				<div id="faqItems">
+					<div class="question"><p>Can the lease period be extended?</p><a class="w-9 rotate-0 1" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="answer hidden border-b border-b-green-950"><p class="py-5">The container lease period vary depending on the model. It is difficult to guarantee a lease extension. However, it can be negotitated.</p>
+					<div class="answer hidden" id="response"><p class="py-5">The container lease period vary depending on the model. It is difficult to guarantee a lease extension. However, it can be negotitated.</p>
 					</div>
 				</div>
 				
-				<div id="quiz">
-					<div class="question"><p>Can a Full Container be Replaced?</p><a class="w-9" id="chevron1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				<div id="faqItems">
+					<div class="question"><p>Can a Full Container be Replaced?</p><a class="w-9 2" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="answer hidden" id="response"><p>We facilitate container replacement by taking the full containers, and placing an empty ones.</p></div>
+					<div class="answer hidden" id="response"><p class="py-5">We facilitate container replacement by taking the full containers, and placing an empty ones.</p></div>
 				</div>
 
-				<div id="quiz">
-					<div class="question"><p>Can the container be collected before the lease period ends?</p><a class="w-9 rotate-0" id="chevron2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				<div id="faqItems">
+					<div class="question"><p >Can the container be collected before the lease period ends?</p><a class="w-9" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="answer hidden" id="response"><p>Yes, the response we provide to our customers extends to your request to withdraw containers upon request.</p></div>
+					<div class="answer hidden" id="response"><p class="py-5">Yes, the response we provide to our customers extends to your request to withdraw containers upon request.</p></div>
 				</div>
 
-				<div id="quiz">
-					<div class="question"><p>What can I do if the Municipality contacts me?</p><a class="w-9" id="chevron3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				<div id="faqItems">
+					<div class="question"><p >What can I do if the Municipality contacts me?</p><a class="w-9" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="answer hidden" id="response"><p>We highly advise our Customers to notify us in the event the Municipality contacts you regarding withdrawal of the container. This enables both the customer and organization avoid penalties.</p></div>
+					<div class="answer hidden" id="response"><p class="py-5">We highly advise our Customers to notify us in the event the Municipality contacts you regarding withdrawal of the container. This enables both the customer and organization avoid penalties.</p></div>
 				</div>
 
-				<div id="quiz">
-					<div class="question"><p>Can I request for multiple containers?</p><a class="w-9" id="chevron4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				<div id="faqItems">
+					<div class="question"><p>Can I request for multiple containers?</p><a class="w-9" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="answer hidden" id="response"><p>Yes. We can provide our customers with more than one container. Even if it is in multiple locations</p></div>
+					<div class="answer hidden" id="response"><p class="py-5">Yes. We can provide our customers with more than one container. Even if it is in multiple locations</p></div>
 				</div>
 
-				<div id="quiz">
-					<div class="question"><p>Can the container be relocated to a different location after delivery?</p><a class="w-9" id="chevron5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				<div id="faqItems">
+					<div class="question"><p>Can the container be relocated to a different location after delivery?</p><a class="w-9" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="answer hidden" id="response"><p>We have a one time placement policy. However, there are circumstances we as an organization compromise and facilitate repositioning, but not relocation.</p></div>
+					<div class="answer hidden" id="response"><p class="py-5">We have a one time placement policy. However, there are circumstances we as an organization compromise and facilitate repositioning, but not relocation.</p></div>
 				</div>
 
-				<div id="quiz">
-					<div class="question"><p>What kind of industrial waste do you dispose?</p><a class="w-9" id="chevron6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+				<div id="faqItems">
+					<div class="question"><p>What kind of industrial waste do you dispose?</p><a class="w-9" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="answer hidden" id="response"><p>We do not facilitate the deposition of any chemical subsance, be it in powder or packaged. We only approve of wood and plastic materials.</p></div>
+					<div class="answer hidden" id="response"><p class="py-5">We do not facilitate the deposition of any chemical subsance, be it in powder or packaged. We only approve of wood and plastic materials.</p></div>
 				</div>
 			</div><!--End of Question Container-->
 
@@ -268,7 +268,7 @@
 
 				
 			</div><!-- End of Regions where one can acquire our services-->
-			<div class="flex justify-center overflow-hidden"><!--Begin of Testimonials-->
+			<div class="flex justify-center overflow-hidden h-[250px]"><!--Begin of Testimonials-->
 				<div class="feedback">
 					<div class="thumbnail">
 						<img src="./images/user.png">
@@ -328,7 +328,7 @@
 		</div>
 		<a><img class="w-20" src="./images/logo.png" alt=""></a>
 	</div>
-	<script src="/public/index.js"></script>
+	<script src="./index.js"></script>
 	</footer>
 </body>
 </html>

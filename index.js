@@ -1,5 +1,4 @@
-const questions = document.querySelectorAll('#quiz')    
-;
+
 
 //Menu on click action
 function openClose() {
@@ -14,20 +13,10 @@ function openClose() {
 };
 
 //Container list dropdown
-/*function dropDown() {
-	const list = document.querySelector('#container_list');
-
-	if (list.classList.contains('hidden'))
-	{
-		 list.classList.remove('hidden')
-	} else {
-		 list.classList.add('hidden')
-	}
-
-}; */
 
 
 //Container selection and testimonials slider
+/*
 let index = 0;
 
 show_container(index);
@@ -35,9 +24,9 @@ show_container(index);
 function show_container(i){
    index += i;
 
-   let images = document.getElementsById("#image");
+   let images = document.querySelectorAll("#image");
 
-   for(i = 0;i < images.length;i++)
+   for(let i=0; i<images.length; i++)
       images[i].classList.contains("hidden");
 
    if(index > images.length - 1){
@@ -51,9 +40,23 @@ function show_container(i){
 
    images[index].classList.remove("hidden");
 }
-
+*/
 //FAQ accordion onClick Action
+let question = document.querySelectorAll('.question');
 
+
+   for (let i=0; i<faqItems.length; i++){
+      question[i].addEventListener('click', () =>{
+         let chevron = document.querySelectorAll('#chevron');
+         let answer = document.querySelectorAll('#response');
+      console.log(answer[i], chevron[i]);
+         if(answer[i].classList.contains('hidden')){
+            answer[i].classList.remove('hidden');
+         } else {
+            answer[i].classList.add('hidden');
+         }
+      });
+   }
 
 
 // Areas of operation infine carousel
