@@ -1,5 +1,5 @@
 
-
+showAnswer();
 //Menu on click action
 function openClose() {
    const menu = document.querySelector('#menu');
@@ -15,8 +15,10 @@ function openClose() {
 //Container list dropdown
 
 
+
+
 //Container selection and testimonials slider
- const images = document.querySelectorAll('#image');
+const images = document.querySelectorAll('#image');
    let imageIndex = 0;
    let intevalId = null;
 
@@ -58,13 +60,18 @@ function nextSlide(){
 }
 
 //FAQ accordion onClick Action
-const question = document.querySelectorAll('.question');
+
+
+function showAnswer(){
+let question = document.querySelectorAll('.question');
+let chevron = document.querySelectorAll('#chevron');
+let answer = document.querySelectorAll('#response');
+
 
    for (let i=0; i<faqItems.length; i++){
       question[i].addEventListener('click', () =>{ 
          
-         let chevron = document.querySelectorAll('#chevron');
-         let answer = document.querySelectorAll('#response');
+         
 /*To hide preselected answers */
       
 
@@ -76,6 +83,6 @@ const question = document.querySelectorAll('.question');
          }
       });
    }
-
+}
 
 // Areas of operation infine carousel
