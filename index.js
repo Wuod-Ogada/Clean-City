@@ -34,10 +34,10 @@ function initializeSlider(){
 //Trigger the image in the interval to be selected and displayed.
  function showImage(index){
       //control images to reset not terminating cycle on each extreme.
-      if(index>= images.length){
+      if(index >= images.length){
          imageIndex = 0;
       } else if (index < 0){
-         imageIndex=slide.length - 1;
+         imageIndex = images.length - 1;
       }
 
       images.forEach(image =>{
@@ -48,7 +48,6 @@ function initializeSlider(){
 
 //Triggers image change on click
 function prevSlide(){
-   clearInterval(intervalId);
    imageIndex--;
    showImage(imageIndex);
 }
