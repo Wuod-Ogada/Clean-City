@@ -16,39 +16,59 @@ function openClose() {
 
 
 //Container selection and testimonials slider
-/*
-let index = 0;
+ const images = document.querySelectorAll('#image');
+   let imageIndex = 0;
+   let intevalId = null;
 
-show_container(index);
+   //initializes browser
+   document.addEventListener("DOMContentLoaded", initializeSlider());
 
-function show_container(i){
-   index += i;
-
-   let images = document.querySelectorAll("#image");
-
-   for(let i=0; i<images.length; i++)
-      images[i].classList.contains("hidden");
-
-   if(index > images.length - 1){
-      index = 0;
+//Triggers browers to display the initial image(pivot) selected.
+function initializeSlider(){
+   if(images.length>0){
+      images[imageIndex].classList.remove('hidden');
+      intervalId = setInterval();
    }
-
-   if(index < 0){
-      index = images.length - 1;
-   }
-      
-
-   images[index].classList.remove("hidden");
 }
-*/
-//FAQ accordion onClick Action
-let question = document.querySelectorAll('.question');
 
+//Trigger the image in the interval to be selected and displayed.
+ function showImage(index){
+      //control images to reset not terminating cycle on each extreme.
+      if(index>= images.length){
+         imageIndex = 0;
+      } else if (index < 0){
+         imageIndex=slide.length - 1;
+      }
+
+      images.forEach(image =>{
+         image.classList.add('hidden');
+      });
+      images[imageIndex].classList.remove('hidden');
+ }
+
+//Triggers image change on click
+function prevSlide(){
+   clearInterval(intervalId);
+   imageIndex--;
+   showImage(imageIndex);
+}
+
+function nextSlide(){  
+   imageIndex++;
+   showImage(imageIndex);
+}
+
+//FAQ accordion onClick Action
+const question = document.querySelectorAll('.question');
 
    for (let i=0; i<faqItems.length; i++){
-      question[i].addEventListener('click', () =>{
+      question[i].addEventListener('click', () =>{ 
+         
          let chevron = document.querySelectorAll('#chevron');
          let answer = document.querySelectorAll('#response');
+/*To hide preselected answers */
+      
+
       console.log(answer[i], chevron[i]);
          if(answer[i].classList.contains('hidden')){
             answer[i].classList.remove('hidden');
