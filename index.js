@@ -60,29 +60,48 @@ function nextSlide(){
 }
 
 //FAQ accordion onClick Action
-
-
 function showAnswer(){
 let question = document.querySelectorAll('.question');
 let chevron = document.querySelectorAll('#chevron');
-let answer = document.querySelectorAll('#response');
+//let answer = document.querySelectorAll('#response');
 
 
-   for (let i=0; i<faqItems.length; i++){
-      question[i].addEventListener('click', () =>{ 
+ /*  for (let i=0; i<faqItems.length; i++){
+      question[i].addEventListener('click', () =>{
          
-         
-/*To hide preselected answers */
-      
+         //question[i].classList.toggle('active');
 
-      console.log(answer[i], chevron[i]);
-         if(answer[i].classList.contains('hidden')){
+      //console.log(answer[i], chevron[i]);
+       if(answer[i].classList.contains('hidden')){
             answer[i].classList.remove('hidden');
          } else {
             answer[i].classList.add('hidden');
          }
       });
-   }
+   } */
+  question.forEach(question =>{
+   question.addEventListener('click', event=>{
+
+      
+      const activeQuestion = document.querySelector('.question.active');
+      console.log(question);
+
+      if(activeQuestion && activeQuestion!==question){
+         activeQuestion.classList.toggle('active');
+         activeQuestion.nextElementSibling.classList.add('hidden');
+      }
+
+      question.classList.toggle('active');
+      const answer = question.nextElementSibling;
+
+      if(question.classList.contains('active')){
+         answer.classList.remove('hidden');
+      } else {
+         answer.classList.add('hidden');
+      }
+
+   });
+  });
 }
 
 // Areas of operation infine carousel
