@@ -1,5 +1,7 @@
 
 showAnswer();
+orderFormPopup();
+
 //Menu on click action
 function openClose() {
    const menu = document.querySelector('#menu');
@@ -12,15 +14,51 @@ function openClose() {
    }
 };
 
-//Container list dropdown
+//Forms
 
+document.querySelector('.sign-in-button').addEventListener('click', function(){
+   document.querySelector('.sign-in-popup').classList.remove('hidden');
+});
+   
+document.querySelector('.sign-in-closer').addEventListener('click', function(){
+   document.querySelector('.sign-in-popup').classList.add('hidden');
+});
 
+function orderFormPopup() {
+   let request = document.querySelectorAll('.placeOrder');
+   const orderForm = document.querySelector('.orderForm');
+   
 
+   request.forEach(request => {
+      request.addEventListener('click', () =>{
+         
+         console.log('place order');
+       const activeplaceOrder = document.querySelector('.placeOrder.active');
+       const closeform = document.querySelector('.close-order-form');
+
+       if(activeplaceOrder && activeplaceOrder!==request){
+         request.classList.toggle('active');
+         orderForm.classList.add('hidden');
+       }
+
+       request.classList.toggle('active');
+
+       if( request.classList.contains('active')){
+         orderForm.classList.remove('hidden');
+       } else {
+         orderForm.classList.add('hidden');
+       }
+
+       
+      });
+   })
+} 
 
 //Container selection and testimonials slider
-const images = document.querySelectorAll('#image');
+
+   const images = document.querySelectorAll('#image');
    let imageIndex = 0;
-   let intevalId = null;
+   let intervalId = null;
 
    //initializes browser
    document.addEventListener("DOMContentLoaded", initializeSlider());
@@ -58,6 +96,7 @@ function nextSlide(){
    imageIndex++;
    showImage(imageIndex);
 }
+
 
 //FAQ accordion onClick Action
 function showAnswer(){
@@ -104,4 +143,4 @@ let chevron = document.querySelectorAll('#chevron');
   });
 }
 
-// Areas of operation infine carousel
+// Areas of operation infinite carousel

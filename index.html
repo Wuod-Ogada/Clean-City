@@ -5,40 +5,132 @@
     <title>Clean City</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="bg-teal-100 font-body">
-    <header class="bg-cyan-200" ><!--Navigation bar -->
-        <div class="mx-7 lg:flex lg:justify-between items-center ">
-						<div class="flex items-center justify-between relative w-full lg:w-20 "><!--Logo and Menu Icon-->
-							<a><img class="w-20" src="./images/logo.png" alt="Logo"></a>
+<body class="bg-teal-100 font-body scroll-smooth">
+	<header class="bg-cyan-200 relative" ><!--Navigation bar -->
+		<div class="mx-7 lg:flex lg:justify-between items-center ">
+			<div class="flex items-center justify-between relative w-full lg:w-20 "><!--Logo and Menu Icon-->
+				<a><img class="w-20" src="./images/logo.png" alt="Logo"></a>
 
-							<a class="cursor-pointer lg:hidden" id="burger" onclick="openClose()"><!--Menu burger Icon-->
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-								<path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-							</svg>
-							</a><!--End of Menu burger Icon-->
-						</div>
+				<a class="cursor-pointer lg:hidden" id="burger" onclick="openClose()"><!--Menu burger Icon-->
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+					<path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+				</svg>
+				</a><!--End of Menu burger Icon-->
+			</div>
+			
+			<div class="hidden lg:flex lg:justify-between items-center w-full lg:w-2/3" id="menu"><!--menulist-->
+				<div class="justify-center items-center">
+					<ul class="text-teal-950 text-base lg:text-2xl lg:flex lg:justify-between lg:space-x-2">
+						<li><a class="menulinks" href="">About Us</a></li>
+						<li><input type="checkbox" name="containers" id="containers" class="hidden peer"><label class="menulinks " for="containers" href="" >Containers+</label>
+							<ul class="bg-cyan-200 text-xl lg:mt-4 space-y-2 h-0 overflow-hidden peer-checked:h-[100px] lg:absolute">
+								<li><a class="hover:border-b hover: border-gray-600" href="">Roll-off Container</a></li>
+								<li><a class="hover:border-b hover: border-gray-600" href="">Skip Bin</a></li>
+								<li><a class="hover:border-b hover: border-gray-600" href="">Compactors</a></li>
+							</ul>
+						</li>
+						<li><a class="menulinks" href="">FAQs</a></li>
+						<li><a class="menulinks" href="">Contact Us</a></li>
+					</ul>
+				</div>
+				<a class="sign-in-button lg:block items-center text-lg px-4 rounded-full bg-blue-300 cursor-pointer mr-9 hover:bg-slate-400">Sign In</a>				
+			</div>
+		</div>
+	</header><!--End of Navigation bar-->
+
+	<!--Order Container Form-->
+	<div class="sign-in-popup hidden absolute w-full h-full bg-teal-100 top-0 items-center" >
+		<!--Start of form Section-->
+		<div class="w-full md:w-[80%] justify-center m-auto md:flex md:mt-[15%] relative items-center bg-teal-100">
+
+			<div class="sign-in-closer absolute top-0 right-0 bg-cyan-200 cursor-pointer">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close size-6 rounded-bl-md cursor-pointer" >
+				<path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+				</svg>
+			</div>
+
+			<!--Logo container-->
+			<div class="hidden md:block justify-center ">
+				<div>
+					<img src="./images/logo.png" alt="" class="">
+				</div>
+				<div class="text-center">
+					<h3 class="">Clean City</h3>
+				</div>
+			</div>
+
+			<!--Start of Registration Form-->
+			<div class="bg-emerald-200 w-full items-center">
+				
+				<form id="registrationForm" action="" class="hidden w-full h-full md:w-3/4 mx-auto justify-center p-3 rounded-md my-auto">
+					<h3 class="text-center text-2xl mb-2">Sign In</h3>
+				<div class="formWrapper justify-center mx-auto w-full my-4"><!--Form Content Wrapper-->	
 						
-            <div class="hidden lg:flex lg:justify-between items-center w-full lg:w-2/3" id="menu"><!--menulist-->
-
-							<div class="justify-center items-center">
-                <ul class="text-teal-950 text-base lg:text-2xl lg:flex lg:justify-between lg:space-x-2">
-									<li><a class="menulinks" href="">About Us</a></li>
-									<li><input type="checkbox" name="containers" id="containers" class="hidden peer"><label class="menulinks " for="containers" href="" >Containers+</label>
-											<ul class="bg-cyan-200 text-xl lg:mt-4 space-y-2 h-0 overflow-hidden peer-checked:h-[100px] lg:absolute">
-											<li><a class="hover:border-b hover: border-gray-600" href="">Roll-off Container</a></li>
-											<li><a class="hover:border-b hover: border-gray-600" href="">Skip Bin</a></li>
-											<li><a class="hover:border-b hover: border-gray-600" href="">Compactors</a></li>
-										</ul>
-									</li>
-									<li><a class="menulinks" href="">FAQs</a></li>
-									<li><a class="menulinks" href="">Contact Us</a></li>
-								</ul>
+					<div id="names" class=" w-3/4 mx-auto grid md:grid-cols-2 md:gap-2 items-center">
+						<div class="mb-3 whitespace-nowrap">
+							<label for="fname" class="mr-1">First name:</label><input type="text" name="fname" id="fname" placeholder="First Name" class="">
+						</div>
+						<div class="mb-3 whitespace-nowrap">
+							<label for="sname" >Surname:</label><input type="text" name="sname" id="sname" placeholder="Surname" class="ml-2">
+						</div>
+					</div>
+					
+					<div id="contacts" class="w-3/4 mx-auto grid md:grid-cols-2 md:gap-2 ">
+						<div class="mb-3 whitespace-nowrap">
+							<label for="address" id="address" class="mr-1">Address:</label>
+							<textarea id="address" class=""></textarea> 
+						</div>
+						<div class="mb-3 whitespace-nowrap"> 
+							<label for="tel" class="mr-2">Telephone:</label><input type="tel" for="tel" name="tel" placeholder="Phone Number" class="mr-2">
+						</div>
+					</div>		
+					
+					<div >
+						<div class="w-3/4 md:w-3/4 mx-auto items-center grid md:grid-cols-2 md:gap-2 ">
+							<div class="mb-3 whitespace-nowrap items-center flex" >
+								<label for="location" id="location" class="mr-1">Password:</label>
+								<input type="password" name="password" id="password" placeholder="Enter Password" class="mr-1">
 							</div>
-						<a class="lg:block items-center text-lg px-4 rounded-full bg-blue-300 cursor-pointer mr-9 hover:bg-slate-400">Sign In</a>				
-            </div>
+							<div class="whitespace-nowrap mb-3">
+								<label for="container">Confirm Password:</label>
+								<input type="password" id="confirm-password" placeholder="Confirm Password">	
+							</div>
+						</div>	
+					</div>
+				</div><!--End of Form Content Wrapper-->
+				<div class="text-center my-3 ">
+					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl cursor-pointer bg-slate-400 px-5 py-1 rounded-md cursor" >Register!</label>
+					<p class="my-2"><a href="#signInForm" class="switch-to-signIn text-cyan-900 hover:text-lime-500">Already have an account? Sign In</a></p>
+				</div>
+				</form><!--End of Registration Form-->
 
-        </div>
-    </header><!--End of Navigation bar-->
+				<!--Start of Sign In Form-->
+				<form id="signInForm" action="" class=" w-3/4 mx-auto justify-center bg-emerald-200 p-3 rounded-md my-3 relative">
+					<h3 class="text-center text-2xl mb-4">Sign Up</h3>
+				<div class="formWrapper justify-center mx-auto w-[50%]"><!--Form Content Wrapper-->
+						
+					<div id="names" class=" md:w-3/4 mx-auto items-center">
+						<div class="mb-4">
+							<label for="username" class="mr-1">Username:</label>
+							<input type="text" name="username" id="username" placeholder="Enter Username" class="">
+						</div>
+					</div>
+					<div id="names" class=" md:w-3/4 mx-auto items-center">
+						<div class="mb-3 ">
+							<label for="password" class="mr-1">Password:</label>
+							<input type="password" name="password" id="password" placeholder="Enter Password" class="">
+						</div>
+					</div>
+				</div><!--End of signIn Form element Wrapper-->
+				<div class="text-center my-3">
+					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl" >Sign In</label>
+					<p><a href="#signInForm" class="switch-to-signIn">Don't have an account? Register</a></p>
+				</div>
+				</form><!--End of Sign In form-->
+			</div>
+		</div><!--End of Order Container Form-->
+	</div><!--End of Form section-->
+
     <section><!--Landing Page -->
 			<div class="items-center grid md:grid-cols-3">
 				<div class="ml-10 my-10 col-span-1"><!--Intro capture phrase-->
@@ -59,17 +151,18 @@
 				</ul>
 				</div><!--How we provide services and what customers are to expect-->
 				<div class=" my-4 w-64"><img  src=".//images/Trashcan1.png" alt="bin"></div>
-			<div class="col-span-1 ml-4 bg-cyan-200 p-3 rounded-lg"> <h4 class="text-3xl">Customer responsibilities:</h4>
-			<ul>
-				<li><h6 class="topic">Accurate Location</h6><p class="topicsentence">it is your duty to share with us accurate location.</p></li>
-				<li><h6 class="topic">Be available</h6><p class="topicsentence">We encourage you to be present to recieve the driver.</p></li>
-				<li><h6 class="topic">Drop zone</h6><p class="topicsentence">Identify and demacate precise location where the container should be placed.</p></li>
-				<li><h6 class="topic">Confirmation</h6><p class="topicsentence">Approve and express content after container offloading before driver departure. </p></li>
-			</ul>
+			<div class="col-span-1 ml-4 bg-cyan-200 p-3 rounded-lg">
+				<h4 class="text-3xl">Customer responsibilities:</h4>
+				<ul>
+					<li><h6 class="topic">Accurate Location</h6><p class="topicsentence">it is your duty to share with us accurate location.</p></li>
+					<li><h6 class="topic">Be available</h6><p class="topicsentence">We encourage you to be present to recieve the driver.</p></li>
+					<li><h6 class="topic">Drop zone</h6><p class="topicsentence">Identify and demacate precise location where the container should be placed.</p></li>
+					<li><h6 class="topic">Confirmation</h6><p class="topicsentence">Approve and express content after container offloading before driver departure. </p></li>
+				</ul>
 			</div>
 		</section><!--End of Service provision section-->
    
-		<section class="my-100px">
+		<section class="my-100px relative">
 			<div class="slider_container w-full flex justify-center items-center py-[50px] md:px-20"><!--Container Wrapper for Slider-->
 			
 			<div id="prev" onclick="prevSlide()">
@@ -106,7 +199,7 @@
 								</div>
 								<div class="flex justify-between text-xl py-5 mx-6">
 								<a>Price:<span class="font-semibold">Sr.450</span></a>
-								<a class="cursor-pointer">Order</a>
+								<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm ">Order</a>
 								</div>
 							</div><!--End of Description-->	
 					</div><!--End of Card-->
@@ -137,7 +230,7 @@
 							</div>
 							<div class="flex justify-between text-xl py-5 mx-6">
 							<a>Price:<span class="font-semibold">Sr.350</span></a>
-							<a class="cursor-pointer">Order</a>
+							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm">Order</a>
 							</div>
 						</div><!--End of Description-->	
 				</div><!--End of Card-->
@@ -169,22 +262,79 @@
 							</div>
 							<div class="flex justify-between text-xl py-5 mx-6">
 							<a>Price:<span class="font-semibold">Sr.400 or sr.500</span></a>
-							<a class="cursor-pointer">Order</a>
+							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm ">Order</a>
 							</div>
 						</div><!--End of Description-->	
 				</div><!--End of Card-->
 				</div>
 			</div><!--End of Slider-->
 
-		<div id="next" onclick="nextSlide()">
-			<a class="Next relative right-0 items-center w-10">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-					<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
-				</svg>					
-			</a><!--Next Button-->
-		</div>
+			<div id="next" onclick="nextSlide()">
+				<a class="Next relative right-0 items-center w-10">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+						<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+					</svg>					
+				</a><!--Next Button-->
+			</div>
 
 			</div>
+
+			<div class="orderForm hidden w-full justify-center items-center "><!--Order Container Form-->
+
+				<form  action="" class="w-3/4 mx-auto justify-center bg-emerald-200 p-3 rounded-md relative">
+					<h3 class="text-center text-2xl mb-3">Place Your Order</h3>
+					<div class="close-order-form absolute top-0 right-0 bg-cyan-200">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close size-6 cursor-pointer" >
+						<path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+						</svg>
+					</div>
+				<div class="formWrapper justify-center mx-auto w-full "><!--Form Content Wrapper-->	
+						
+					<div id="names" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 items-center">
+						<div class="mb-3 whitespace-nowrap">
+							<label for="fname" class="mr-1">First Name:</label><input type="text" name="fname" id="fname" placeholder="First Name" class="">
+						</div>
+						<div class="mb-3 whitespace-nowrap">
+							<label for="sname" >Surname:</label><input type="text" name="sname" id="sname" placeholder="Surname" class="ml-2">
+						</div>
+					</div>
+					
+					<div id="contacts" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 ">
+						<div class="mb-3 whitespace-nowrap">
+							<label for="address" id="address" class="mr-1">Address:</label><input type="text" name="address" id="address" placeholder="Enter Address" class="mr-2">
+						</div>
+						<div class="mb-3 whitespace-nowrap"> 
+							<label for="tel" class="mr-2">Telephone:</label><input type="tel" for="tel" name="tel" placeholder="Phone Number" class="mr-2">
+						</div>
+					</div>		
+					
+					<div >
+						<div class="w-3/4 mx-auto items-center grid md:grid-cols-2 gap-2 ">
+							<div class="mb-3 whitespace-nowrap items-center flex" >
+								<label for="location" id="location" class="mr-1">Location:</label><input type="text" name="location" id="location" placeholder="Add location" class="mr-1">
+								<a href="" class="w-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(106, 114, 114);transform:msFilter;"><circle cx="12" cy="12" r="4"></circle><path d="M13 4.069V2h-2v2.069A8.01 8.01 0 0 0 4.069 11H2v2h2.069A8.008 8.008 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path></svg></a>
+							</div>
+							<div class="whitespace-nowrap mb-3">
+								<label for="container">Container</label>
+								<select id="container">
+									<option value="container"> Roll-Off Container</option>
+									<option value="container">Skip Bin</option>
+									<option value="container">Compactor: Residential</option>
+									<option value="container">Compactor: Commercial</option>
+								</select>
+							</div>
+						</div>
+						<div class="Price w-full text-center"><!--appears when customer chooses container-->
+							<p>Sr:</p>
+						</div>
+					</div>
+				</div><!--End of Form Content Wrapper-->
+				<div class="text-center my-3">
+					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl" >Place Order!</label>
+				</div>
+
+				</form>
+			</div><!--End of Order Container Form-->
 		</section><!--Slider images of container types and order-->
 
     <section class="my-12 w-full items-center justify-center"><!--Start of FAQs section-->
@@ -234,7 +384,7 @@
 				</a></div>
 					<div class="answer hidden" id="response"><p class="py-5">We do not facilitate the deposition of any chemical subsance, be it in powder or packaged. We only approve of wood and plastic materials.</p></div>
 				</div>
-			</div><!--End of Question Container-->
+			</div><!--End of Questions Container-->
 
 			</div><!--FAQ container End-->
 		</section><!--End of FAQs Section-->
@@ -267,7 +417,7 @@
 			</div>
 		</section>
     <section>
-			<div class="flex flex-row w-full space-x-3 gap-2 overflow-hidden" ><!--Regions where one can acquire our services-->
+			<div class="flex justify-between space-x-3 overflow-hidden pb-10" ><!--Regions where one can acquire our services-->
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap ">AN NUZHA</p></span>
 				</div>
@@ -281,13 +431,13 @@
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AN NAZEEM</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap pr-10">AL JANADHIRIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap mr-10">AL JANADHIRIYA</p></span>
 				</div>
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AN NARJIS</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AS SULAIMANIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap mr-10">AS SULAIMANIYA</p></span>
 				</div>
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AR RIMAL</p></span>
@@ -308,6 +458,9 @@
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL SINA'IYAH</p></span>
 				</div>
 				<div class="locale">
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">DAR AL BAIDA</p></span>
+				</div>
+				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL MASHAEL</p></span>
 				</div>
 				<div class="locale">
@@ -320,9 +473,25 @@
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">HEET</p></span>
 				</div>
 
-				
 			</div><!-- End of Regions where one can acquire our services-->
-			<div class="flex justify-center overflow-hidden h-[250px]"><!--Begin of Testimonials-->
+
+
+			<div class="justify-center w-full">
+				<div class="justify-center mx-auto w-60">
+					<h3 class="text-center border-b border-gray-600 text-2xl">Testimonials</h3>
+				</div>
+				
+			
+			<div class="flex justify-center w-full items-center "><!--Testimonial Container-->
+				<div class="bg-slate-300 rounded-full w-16"><!--Previous Button-->
+				<a class="hidden md:flex items-center justify-center" onclick="prevFeedback()">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+					<path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+				</svg>
+				</a>
+				</div><!--End of Previous Button-->
+
+				<div class="flex md:justify-between lg:justify-center overflow-hidden h-[250px] "><!--Begin of Testimonials-->
 				<div class="feedback">
 					<div class="thumbnail">
 						<img src="./images/user.png">
@@ -347,8 +516,35 @@
 						<p><em>Let's talk Professionalism. The driver placed the container as instructed and adviced me on the repercussions and risks of the containers not being properly placed.</em></p>
 					</div>
 				</div>
+				<div class="feedback">
+					<div class="thumbnail">
+						<img src="./images/user.png">
+					</div>
+					<div class="customerOpinion">
+						<p><em>They were kind enough to approve my request to ask for a big container even after changing my request upon recieving my previous container.</em></p>
+					</div>
+				</div>
+				<div class="feedback">
+					<div class="thumbnail">
+						<img src="./images/user.png">
+					</div>
+					<div class="customerOpinion">
+						<p><em>Fast, deligent and reliable. What else can one ask for?</em></p>
+					</div>
+				</div>
 			</div><!--Client feedback for website visitors to see services we provide-->
+			
+			<div class="bg-slate-300 rounded-full w-16"><!--Next Button-->
+			<a class="hidden md:flex items-center justify-center" onclick="nextFeedback()">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+					<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+				</svg>					
+			</a>
+			</div><!-- End of Next Button-->
+		</div><!--End of testimonial container-->
+	</div>
 		</section>
+
     <footer class="sm:w-full bg-cyan-200 py-4">
 	<div class=" mx-7  md:flex justify-between items-center">
 		<div class="sm:py-5 ">
@@ -356,7 +552,7 @@
 			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#">Home</a></li>
 			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#">About Us</a></li>
 			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#">FAQs</a></li>
-			<li><a class="rounded-full bg-slate-400 px-2 my-1 " href="#">Order NOW!</a></li>
+			<li><a class="order-button rounded-full bg-slate-400 px-2 my-1 " href="#">Order NOW!</a></li>
 			</ul>
 		</div>
 		<div class="py-7 md:py-5 text-lg"><!--CLocation and Contacts-->
@@ -371,7 +567,7 @@
 		</div>
 		<div class="py-5"><!--Social Media-->
 			<ul class="flex space-x-4">
-				<li><a class="px-3 cursor-pointer transition ease-in-out duration-500 hover:scale-y-50">
+				<li><a class="px-3 cursor-pointer hover:scale-y-50">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"></path></svg></a></li>
 				<li><a class="px-3 cursor-pointer ">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg></a></li>
@@ -382,7 +578,7 @@
 		</div>
 		<a><img class="w-20" src="./images/logo.png" alt=""></a>
 	</div>
-	<script src="./index.js"></script>
 	</footer>
+	<script src="./index.js"></script>
 </body>
 </html>
