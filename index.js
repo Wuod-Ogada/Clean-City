@@ -41,17 +41,21 @@ function orderFormPopup() {
          orderForm.classList.add('hidden');
        }
 
-       request.classList.toggle('active');
+       request.classList.add('active');
 
        if( request.classList.contains('active')){
          orderForm.classList.remove('hidden');
-       } else {
-         orderForm.classList.add('hidden');
        }
 
-       
+       closeform.addEventListener('click', function(){
+         closeform.classList.toggle('active');
+
+       if(closeform.classList.contains('active')){
+         orderForm.classList.add('hidden'); 
+      }
       });
-   })
+   });
+ })
 } 
 
 //Container selection and testimonials slider
