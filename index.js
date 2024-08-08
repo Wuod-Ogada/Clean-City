@@ -23,12 +23,14 @@ document.querySelector('.sign-in-button').addEventListener('click', function(){
 document.querySelector('.sign-in-closer').addEventListener('click', function(){
    document.querySelector('.sign-in-popup').classList.add('hidden');
 });
+   
+   
 
 function orderFormPopup() {
    let request = document.querySelectorAll('.placeOrder');
    const orderForm = document.querySelector('.orderForm');
    
-
+   
    request.forEach(request => {
       request.addEventListener('click', () =>{
          
@@ -55,8 +57,8 @@ function orderFormPopup() {
       }
       });
    });
- })
-} 
+ });
+}
 
 //Container selection and testimonials slider
 
