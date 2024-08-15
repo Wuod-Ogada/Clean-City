@@ -24,13 +24,13 @@
 						<li><a class="menulinks" href="">About Us</a></li>
 						<li><input type="checkbox" name="containers" id="containers" class="hidden peer"><label class="menulinks " for="containers" href="" >Containers+</label>
 							<ul class="bg-cyan-200 text-xl lg:mt-4 space-y-2 h-0 overflow-hidden peer-checked:h-[100px] lg:absolute">
-								<li><a class="hover:border-b hover: border-gray-600" href="">Roll-off Container</a></li>
-								<li><a class="hover:border-b hover: border-gray-600" href="">Skip Bin</a></li>
-								<li><a class="hover:border-b hover: border-gray-600" href="">Compactors</a></li>
+								<li><a class="hover:border-b hover: border-gray-600" href="#containerSection">Roll-off Container</a></li>
+								<li><a class="hover:border-b hover: border-gray-600" href="#containerSection">Skip Bin</a></li>
+								<li><a class="hover:border-b hover: border-gray-600" href="#containerSection">Compactors</a></li>
 							</ul>
 						</li>
-						<li><a class="menulinks" href="">FAQs</a></li>
-						<li><a class="menulinks" href="">Contact Us</a></li>
+						<li><a class="menulinks" href="#faqSection">FAQs</a></li>
+						<li><a class="menulinks" href="#contactSection">Contact Us</a></li>
 					</ul>
 				</div>
 				<a class="sign-in-button lg:block items-center text-lg px-4 rounded-full bg-blue-300 cursor-pointer mr-9 transition-colors ease-in-out duration-500 hover:bg-slate-400">Sign In</a>				
@@ -60,7 +60,7 @@
 			</div>
 
 			<!--Start of Registration Form-->
-			<div class="bg-emerald-200 w-full items-center">
+			<div class="bg-emerald-200 w-full items-center transition-opacity ease-in-out duration-300 animate-fadeIn">
 				
 				<form id="registrationForm" action="" class="hidden w-full h-full md:w-3/4 mx-auto justify-center p-3 rounded-md my-auto">
 					<h3 class="text-center text-2xl mb-2">Sign In</h3>
@@ -131,7 +131,7 @@
 		</div><!--End of Order Container Form-->
 	</div><!--End of Form section-->
 
-    <section><!--Landing Page -->
+    <section id="home"><!--Landing Page -->
 			<div class="items-center grid md:grid-cols-3">
 				<div class="ml-10 col-span-1"><!--Intro capture phrase-->
 					<h1 class="text-6xl mb-4">CLEAN CITY</h1>
@@ -170,187 +170,187 @@
 		</div>
 	</section><!--End of Service provision section-->
    
-		<section class="my-100px relative">
-			<div class="slider_container w-full flex justify-center items-center py-[50px] md:px-20"><!--Container Wrapper for Slider-->
-			
-			<div id="prev" onclick="prevSlide()">
-				<a class="Previous relative left-0 items-center w-10" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-					<path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
-				</svg>
-				</a><!--Previous Button-->
-			</div>
+	<section id="containerSection" class=" my-100px relative">
+		<div class="slider_container w-full flex justify-center items-center py-[50px] md:px-20"><!--Container Wrapper for Slider-->
+		
+		<div id="prev" onclick="prevSlide()">
+			<a class="Previous relative left-0 items-center w-10" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+				<path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+			</svg>
+			</a><!--Previous Button-->
+		</div>
 
-			<div class="slider relative flex w-[90%] md:px-[10px]"><!--Start of Slider-->
+		<div class="slider relative flex w-[90%] md:px-[10px]"><!--Start of Slider-->
 
-				<div id="image" class="1 hidden w-full ">
-					<div class="card items-center md:flex overflow-hidden">
-						<div class="imageholder lg:w-[75%] animate-fadeIn transition-opacity ease-in-out ">
-							<img class="" src="./images/roll-on-off.png" alt="Roll-off Container">
+			<div id="image" class="1 hidden w-full ">
+				<div class="card items-center md:flex overflow-hidden">
+					<div class="imageholder lg:w-[75%] animate-fadeIn transition-opacity ease-in-out ">
+						<img class="" src="./images/roll-on-off.png" alt="Roll-off Container">
+					</div>
+
+					<div class="description bg-cyan-200 rounded-md ">
+						<div class="ml-5 hidden md:block">
+							<ul class="py-3  text-lg">
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Dimensions:</h6>
+									<p><strong>L:</strong>6m <strong>W:</strong>:2m <strong>H:</strong>1.2m</p>
+								</li>
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Lease Period:</h6>
+									<p>This container is issued for 12days.</p>
+								</li>
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Suitable for:</h6>
+									<p>It is suitable for most of refuse apart from Chemical based residue.</p>
+								</li>
+							</ul>
 						</div>
-
-						<div class="description bg-cyan-200 rounded-md ">
-							<div class="ml-5 hidden md:block">
-								<ul class="py-3  text-lg">
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Dimensions:</h6>
-										<p><strong>L:</strong>6m <strong>W:</strong>:2m <strong>H:</strong>1.2m</p>
-									</li>
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Lease Period:</h6>
-										<p>This container is issued for 12days.</p>
-									</li>
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Suitable for:</h6>
-										<p>It is suitable for most of refuse apart from Chemical based residue.</p>
-									</li>
-								</ul>
-							</div>
-							<div class="flex justify-between text-xl py-5 mx-6">
-							<a>Price:<span class="font-semibold">Sr.450</span></a>
-							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
-							</div>
-						</div><!--End of Description-->	
-					</div><!--End of Card-->
-				</div><!--End of Image 1-->
-
-				<div id="image" class="2 hidden w-full "><!--SkipBin Slide-->
-					<div class="card items-center md:flex overflow-hidden">
-						<div class="imageholder lg:w-[75%] animate-fadeIn transition-opacity ease-in-out ">
-							<img class="w-full " src="./images/Skip-Bin-Truck.png" alt="Roll-off Container">
+						<div class="flex justify-between text-xl py-5 mx-6">
+						<a>Price:<span class="font-semibold">Sr.450</span></a>
+						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
 						</div>
-
-						<div class="description bg-cyan-200 rounded-md ">
-							<div class="ml-5 hidden md:block">
-								<ul class="py-3  text-lg">
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Dimensions:</h6>
-										<p><strong>L:</strong>2.5m <strong>W:</strong>:1.5m <strong>H:</strong>2.5m</p>
-									</li>
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Lease Period:</h6>
-										<p>This container is issued for 12days.</p>
-									</li>
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Suitable for:</h6>
-										<p>It is suitable for most of refuse apart from Chemical based residue.</p>
-									</li>
-								</ul>
-							</div>
-							<div class="flex justify-between text-xl py-5 mx-6">
-							<a>Price:<span class="font-semibold">Sr.350</span></a>
-							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
-							</div>
-						</div><!--End of Description-->	
+					</div><!--End of Description-->	
 				</div><!--End of Card-->
-				</div>
+			</div><!--End of Image 1-->
 
-				<div id="image" class="3 hidden w-full"><!--Compactor slide-->
-					<div class="card items-center md:flex overflow-hidden">
-						<div class="imageholder lg:w-3/4 animate-fadeIn transition-opacity ease-in-out ">
-							<img class="w-full" src="./images/Skip Compactor.png" alt="Roll-off Container" class="animate-fade ease-in-out duration-500">
+			<div id="image" class="2 hidden w-full "><!--SkipBin Slide-->
+				<div class="card items-center md:flex overflow-hidden">
+					<div class="imageholder lg:w-[75%] animate-fadeIn transition-opacity ease-in-out ">
+						<img class="w-full " src="./images/Skip-Bin-Truck.png" alt="Roll-off Container">
+					</div>
+
+					<div class="description bg-cyan-200 rounded-md ">
+						<div class="ml-5 hidden md:block">
+							<ul class="py-3  text-lg">
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Dimensions:</h6>
+									<p><strong>L:</strong>2.5m <strong>W:</strong>:1.5m <strong>H:</strong>2.5m</p>
+								</li>
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Lease Period:</h6>
+									<p>This container is issued for 12days.</p>
+								</li>
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Suitable for:</h6>
+									<p>It is suitable for most of refuse apart from Chemical based residue.</p>
+								</li>
+							</ul>
 						</div>
-
-						<div class="description bg-cyan-200 rounded-md ">
-							<div class="ml-5 hidden md:block">
-								<ul class="py-3  text-lg">
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Dimensions:</h6>
-										<p><strong>L:</strong>4m <strong>W:</strong>:2.5m <strong>H:</strong>1.2m</p>
-										<p><strong>L:</strong>6m <strong>W:</strong>:2.5m <strong>H:</strong>1.2m</p>
-									</li>
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Lease Period:</h6>
-										<p>This container is issued for 15days.</p>
-									</li>
-									<li>
-										<h6 class="font-semibold text-xl pl-3">Suitable for:</h6>
-										<p>It is suitable for most residential, malls, and complexes. Serves to collect garbage.</p>
-									</li>
-								</ul>
-							</div>
-							<div class="flex justify-between text-xl py-5 mx-6">
-							<a>Price:<span class="font-semibold">Sr.400 or sr.500</span></a>
-							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
-							</div>
-						</div><!--End of Description-->	
-				</div><!--End of Card-->
-				</div>
-			</div><!--End of Slider-->
-
-			<div id="next" onclick="nextSlide()">
-				<a class="Next relative right-0 items-center w-10">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-						<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
-					</svg>					
-				</a><!--Next Button-->
+						<div class="flex justify-between text-xl py-5 mx-6">
+						<a>Price:<span class="font-semibold">Sr.350</span></a>
+						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
+						</div>
+					</div><!--End of Description-->	
+			</div><!--End of Card-->
 			</div>
 
+			<div id="image" class="3 hidden w-full"><!--Compactor slide-->
+				<div class="card items-center md:flex overflow-hidden">
+					<div class="imageholder lg:w-3/4 animate-fadeIn transition-opacity ease-in-out ">
+						<img class="w-full" src="./images/Skip Compactor.png" alt="Roll-off Container" class="animate-fade ease-in-out duration-500">
+					</div>
+
+					<div class="description bg-cyan-200 rounded-md ">
+						<div class="ml-5 hidden md:block">
+							<ul class="py-3  text-lg">
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Dimensions:</h6>
+									<p><strong>L:</strong>4m <strong>W:</strong>:2.5m <strong>H:</strong>1.2m</p>
+									<p><strong>L:</strong>6m <strong>W:</strong>:2.5m <strong>H:</strong>1.2m</p>
+								</li>
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Lease Period:</h6>
+									<p>This container is issued for 15days.</p>
+								</li>
+								<li>
+									<h6 class="font-semibold text-xl pl-3">Suitable for:</h6>
+									<p>It is suitable for most residential, malls, and complexes. Serves to collect garbage.</p>
+								</li>
+							</ul>
+						</div>
+						<div class="flex justify-between text-xl py-5 mx-6">
+						<a>Price:<span class="font-semibold">Sr.400 or sr.500</span></a>
+						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
+						</div>
+					</div><!--End of Description-->	
+			</div><!--End of Card-->
 			</div>
-			<!--Order Container Form-->
-			<div class="orderForm hidden absolute top-0 h-full w-full justify-center items-center animate-fadeIn ease-in-out duration-400">
-				<form  action="" class="w-full h-full pt-3 items-center md:w-3/4 mx-auto justify-center rounded-md relative bg-emerald-200 ">
-					
-					<div class="close-order-form absolute top-0 right-0 bg-cyan-200">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close size-6 cursor-pointer" >
-						<path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-						</svg>
-					</div>
-				<div class="formWrapper justify-center mx-auto w-full md:w-[80%] md:h-[60%] md:mt-[10%] "><!--Form Content Wrapper-->	
-					<h3 class="text-center text-2xl mb-3">Place Your Order</h3>	
-	
-					<div id="names" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 items-center">
-						<div class="mb-3 whitespace-nowrap">
-							<label for="fname" class="mr-1">First Name:</label><input type="text" name="fname" id="fname" placeholder="First Name" class="">
-						</div>
-						<div class="mb-3 whitespace-nowrap">
-							<label for="sname" >Surname:</label><input type="text" name="sname" id="sname" placeholder="Surname" class="ml-2">
-						</div>
-					</div>
-					
-					<div id="contacts" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 ">
-						<div class="mb-3 whitespace-nowrap">
-							<label for="address" id="address" class="mr-1">Address:</label><input type="text" name="address" id="address" placeholder="Enter Address" class="mr-2">
-						</div>
-						<div class="mb-3 whitespace-nowrap"> 
-							<label for="tel" class="mr-2">Telephone:</label><input type="tel" for="tel" name="tel" placeholder="Phone Number" class="mr-2">
-						</div>
-					</div>		
-					
-					<div >
-						<div class="w-3/4 mx-auto items-center grid md:grid-cols-2 gap-2 ">
-							<div class="mb-3 whitespace-nowrap items-center flex" >
-								<label for="location" id="location" class="mr-1">Location:</label><input type="text" name="location" id="location" placeholder="Add location" class="mr-1">
-								<a href="" class="w-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(106, 114, 114);transform:msFilter;"><circle cx="12" cy="12" r="4"></circle><path d="M13 4.069V2h-2v2.069A8.01 8.01 0 0 0 4.069 11H2v2h2.069A8.008 8.008 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path></svg></a>
-							</div>
-							<div class="whitespace-nowrap mb-3">
-								<label for="container">Container</label>
-								<select id="container">
-									<option value="container">Roll-Off Container</option>
-									<option value="container">Skip Bin</option>
-									<option value="container">Compactor: Residential</option>
-									<option value="container">Compactor: Commercial</option>
-								</select>
-							</div>
-						</div>
-						<div class="Price w-full text-center"><!--appears when customer chooses container-->
-							<p>Sr:</p>
-						</div>
-					</div>
-					<div class="text-center py-3">
-						<input type="submit" id="order" class="hidden"><label for="order" class="text-xl bg-slate-300 px-2 rounded-md cursor-pointer transform hover:scale-110 ease-in-out duration-150" data-open-modal>Place Order!</label>
-					</div>
-				</div><!--End of Form Content Wrapper-->
+		</div><!--End of Slider-->
+
+		<div id="next" onclick="nextSlide()">
+			<a class="Next relative right-0 items-center w-10">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+					<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+				</svg>					
+			</a><!--Next Button-->
+		</div>
+
+		</div>
+		<!--Order Container Form-->
+		<div class="orderForm hidden absolute top-0 h-full w-full justify-center items-center animate-fadeIn ease-in-out duration-400">
+			<form  action="" class="w-full h-full pt-3 items-center md:w-3/4 mx-auto justify-center rounded-md relative bg-emerald-200 ">
 				
-				</form>
-			</div><!--End of Order Container Form-->
+				<div class="close-order-form absolute top-0 right-0 bg-cyan-200">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close size-6 cursor-pointer" >
+					<path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+					</svg>
+				</div>
+			<div class="formWrapper justify-center mx-auto w-full md:w-[80%] md:h-[60%] md:mt-[10%] "><!--Form Content Wrapper-->	
+				<h3 class="text-center text-2xl mb-3">Place Your Order</h3>	
 
-		</section><!--Slider images of container types and order-->
+				<div id="names" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 items-center">
+					<div class="mb-3 whitespace-nowrap">
+						<label for="fname" class="mr-1">First Name:</label><input type="text" name="fname" id="fname" placeholder="First Name" class="">
+					</div>
+					<div class="mb-3 whitespace-nowrap">
+						<label for="sname" >Surname:</label><input type="text" name="sname" id="sname" placeholder="Surname" class="ml-2">
+					</div>
+				</div>
+				
+				<div id="contacts" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 ">
+					<div class="mb-3 whitespace-nowrap">
+						<label for="address" id="address" class="mr-1">Address:</label><input type="text" name="address" id="address" placeholder="Enter Address" class="mr-2">
+					</div>
+					<div class="mb-3 whitespace-nowrap"> 
+						<label for="tel" class="mr-2">Telephone:</label><input type="tel" for="tel" name="tel" placeholder="Phone Number" class="mr-2">
+					</div>
+				</div>		
+				
+				<div >
+					<div class="w-3/4 mx-auto items-center grid md:grid-cols-2 gap-2 ">
+						<div class="mb-3 whitespace-nowrap items-center flex" >
+							<label for="location" id="location" class="mr-1">Location:</label><input type="text" name="location" id="location" placeholder="Add location" class="mr-1">
+							<a href="" class="w-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(106, 114, 114);transform:msFilter;"><circle cx="12" cy="12" r="4"></circle><path d="M13 4.069V2h-2v2.069A8.01 8.01 0 0 0 4.069 11H2v2h2.069A8.008 8.008 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path></svg></a>
+						</div>
+						<div class="whitespace-nowrap mb-3">
+							<label for="container">Container</label>
+							<select id="container">
+								<option value="container">Roll-Off Container</option>
+								<option value="container">Skip Bin</option>
+								<option value="container">Compactor: Residential</option>
+								<option value="container">Compactor: Commercial</option>
+							</select>
+						</div>
+					</div>
+					<div class="Price w-full text-center"><!--appears when customer chooses container-->
+						<p>Sr:</p>
+					</div>
+				</div>
+				<div class="text-center py-3">
+					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl bg-slate-300 px-2 rounded-md cursor-pointer transform hover:scale-110 ease-in-out duration-150" data-open-modal>Place Order!</label>
+				</div>
+			</div><!--End of Form Content Wrapper-->
+			
+			</form>
+		</div><!--End of Order Container Form-->
+
+	</section><!--Slider images of container types and order-->
 
 		<div class="modal"><!--Modal Container-->
 			<!--Loading Content from JS-->
 		</div>
 
-    <section class="my-12 w-full items-center justify-center"><!--Start of FAQs section-->
+    <section id="faqSection" class="my-12 w-full items-center justify-center"><!--Start of FAQs section-->
 			<div class="sm:w-auto md:w-3/5 m-auto bg-cyan-200 p-3 rounded-md"><!--FAQ container-->
 			<h3 class="text-3xl text-center pb-4 mb-4 border-b border-b-gray-500">FAQs</h3>
 
@@ -557,14 +557,14 @@
 	</div>
 		</section>
 
-    <footer class="sm:w-full bg-cyan-200 py-4">
+    <footer id="contactSection" class="sm:w-full bg-cyan-200 py-4">
 	<div class=" mx-7  md:flex justify-between items-center">
 		<div class="sm:py-5 ">
 			<ul class=" text-lg">
-			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#">Home</a></li>
-			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#">About Us</a></li>
-			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#">FAQs</a></li>
-			<li><a class="order-button rounded-full bg-slate-400 px-2 my-1 transform transition-all ease-in-out duration-150 hover:scale-x-50" href="#">Order NOW!</a></li>
+			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#home">Home</a></li>
+			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#aboutUsSection">About Us</a></li>
+			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#faqSection">FAQs</a></li>
+			<li><a class="order-button rounded-full bg-slate-400 px-2 my-1 transform transition-all ease-in-out duration-150 hover:scale-x-50" href="#containerSection">Order NOW!</a></li>
 			</ul>
 		</div>
 		<div class="py-7 md:py-5 text-lg"><!--CLocation and Contacts-->

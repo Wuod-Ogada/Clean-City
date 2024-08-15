@@ -877,6 +877,20 @@ video {
   animation: open-dropdown 0.5s linear;
 }
 
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+  }
+}
+
+.animate-fadeOut{
+  animation: fadeOut 0.2s ease-in-out;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -1178,6 +1192,10 @@ video {
 
 .duration-500{
   transition-duration: 500ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
 
 .ease-in-out{
