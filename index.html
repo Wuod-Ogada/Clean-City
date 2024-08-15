@@ -33,7 +33,7 @@
 						<li><a class="menulinks" href="">Contact Us</a></li>
 					</ul>
 				</div>
-				<a class="sign-in-button lg:block items-center text-lg px-4 rounded-full bg-blue-300 cursor-pointer mr-9 hover:bg-slate-400">Sign In</a>				
+				<a class="sign-in-button lg:block items-center text-lg px-4 rounded-full bg-blue-300 cursor-pointer mr-9 transition-colors ease-in-out duration-500 hover:bg-slate-400">Sign In</a>				
 			</div>
 		</div>
 	</header><!--End of Navigation bar-->
@@ -105,10 +105,10 @@
 				</form><!--End of Registration Form-->
 
 				<!--Start of Sign In Form-->
-				<form id="signInForm" action="" class=" w-3/4 mx-auto justify-center bg-emerald-200 p-3 rounded-md my-3 relative">
-					<h3 class="text-center text-2xl mb-4">Sign Up</h3>
-				<div class="formWrapper justify-center mx-auto w-[50%]"><!--Form Content Wrapper-->
-						
+				<form id="signInForm" action="" class=" w-3/4 mx-auto justify-center bg-emerald-200 p-3 rounded-md relative h-full">
+					
+				<div class="formWrapper justify-center mx-auto w-[50%] mt-[45%] md:mt-0"><!--Form Content Wrapper-->
+					<h3 class="text-center text-2xl mb-2">Sign Up</h3>
 					<div id="names" class=" md:w-3/4 mx-auto items-center">
 						<div class="mb-4">
 							<label for="username" class="mr-1">Username:</label>
@@ -133,7 +133,7 @@
 
     <section><!--Landing Page -->
 			<div class="items-center grid md:grid-cols-3">
-				<div class="ml-10 my-10 col-span-1"><!--Intro capture phrase-->
+				<div class="ml-10 col-span-1"><!--Intro capture phrase-->
 					<h1 class="text-6xl mb-4">CLEAN CITY</h1>
 					<h2 class="font-heading text-3xl pb-4">YOUR NO:1 CONTAINER SOLUTION</h2>
 					<p class="text-2xl">Offering the best waste-management Services by leasing containers fit for use in residential or some industrial waste disposal.</p>
@@ -174,9 +174,9 @@
 
 			<div class="slider relative flex w-[90%] md:px-[10px]"><!--Start of Slider-->
 
-				<div id="image" class="1 hidden w-full">
+				<div id="image" class="1 hidden w-full ">
 					<div class="card items-center md:flex overflow-hidden">
-							<div class="imageholder lg:w-[75%]">
+							<div class="imageholder lg:w-[75%] animate-fadeIn transition-opacity ease-in-out ">
 								<img class="" src="./images/roll-on-off.png" alt="Roll-off Container">
 							</div>
 
@@ -199,16 +199,16 @@
 								</div>
 								<div class="flex justify-between text-xl py-5 mx-6">
 								<a>Price:<span class="font-semibold">Sr.450</span></a>
-								<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm ">Order</a>
+								<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
 								</div>
 							</div><!--End of Description-->	
 					</div><!--End of Card-->
 				</div><!--End of Image 1-->
 
-				<div id="image" class="2 hidden w-full"><!--SkipBin Slide-->
+				<div id="image" class="2 hidden w-full "><!--SkipBin Slide-->
 					<div class="card items-center md:flex overflow-hidden">
-						<div class="imageholder lg:w-[75%]">
-							<img class="w-full" src="./images/Skip-Bin-Truck.png" alt="Roll-off Container">
+						<div class="imageholder lg:w-[75%] animate-fadeIn transition-opacity ease-in-out ">
+							<img class="w-full " src="./images/Skip-Bin-Truck.png" alt="Roll-off Container">
 						</div>
 
 						<div class="description bg-cyan-200 rounded-md ">
@@ -230,7 +230,7 @@
 							</div>
 							<div class="flex justify-between text-xl py-5 mx-6">
 							<a>Price:<span class="font-semibold">Sr.350</span></a>
-							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm">Order</a>
+							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
 							</div>
 						</div><!--End of Description-->	
 				</div><!--End of Card-->
@@ -238,8 +238,8 @@
 
 				<div id="image" class="3 hidden w-full"><!--Compactor slide-->
 					<div class="card items-center md:flex overflow-hidden">
-						<div class="imageholder lg:w-3/4">
-							<img class="w-full" src="./images/Skip Compactor.png" alt="Roll-off Container">
+						<div class="imageholder lg:w-3/4 animate-fadeIn transition-opacity ease-in-out ">
+							<img class="w-full" src="./images/Skip Compactor.png" alt="Roll-off Container" class="animate-fade ease-in-out duration-500">
 						</div>
 
 						<div class="description bg-cyan-200 rounded-md ">
@@ -262,7 +262,7 @@
 							</div>
 							<div class="flex justify-between text-xl py-5 mx-6">
 							<a>Price:<span class="font-semibold">Sr.400 or sr.500</span></a>
-							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm ">Order</a>
+							<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
 							</div>
 						</div><!--End of Description-->	
 				</div><!--End of Card-->
@@ -279,7 +279,7 @@
 
 			</div>
 
-			<div class="orderForm absolute top-0 h-full hidden w-full justify-center items-center  "><!--Order Container Form-->
+			<div class="orderForm absolute top-0 h-full hidden w-full justify-center items-center animate-fadeIn ease-in-out duration-300 "><!--Order Container Form-->
 
 				<form  action="" class="w-full h-full md:w-3/4 mx-auto justify-center p-3 rounded-md relative bg-emerald-200">
 					
@@ -318,7 +318,7 @@
 							<div class="whitespace-nowrap mb-3">
 								<label for="container">Container</label>
 								<select id="container">
-									<option value="container"> Roll-Off Container</option>
+									<option value="container">Roll-Off Container</option>
 									<option value="container">Skip Bin</option>
 									<option value="container">Compactor: Residential</option>
 									<option value="container">Compactor: Commercial</option>
@@ -330,13 +330,17 @@
 						</div>
 					</div>
 				</div><!--End of Form Content Wrapper-->
-				<div class="text-center my-3">
-					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl" >Place Order!</label>
+				<div class="text-center my-3 ">
+					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl bg-slate-300 px-2 rounded-md cursor-pointer transform hover:scale-110 ease-in-out duration-150" data-open-modal>Place Order!</label>
 				</div>
-
 				</form>
 			</div><!--End of Order Container Form-->
+
 		</section><!--Slider images of container types and order-->
+
+		<div class="modal"><!--Modal Container-->
+			<!--Loading Content from JS-->
+		</div>
 
     <section class="my-12 w-full items-center justify-center"><!--Start of FAQs section-->
 			<div class="sm:w-auto md:w-3/5 m-auto bg-cyan-200 p-3 rounded-md"><!--FAQ container-->
@@ -391,7 +395,7 @@
 		</section><!--End of FAQs Section-->
 
     <section class="my-12 w-full items-center justify-center">
-			<div class="my-10 pb-10 ">
+			<div class="my-10 pb-10">
 				<h1 class="text-center text-4xl mb-4">CHOOSE US!</h1>
 				<div class="sm:w-11/12 md:w-3/5 m-auto mb-10">
 					<div class="flex items-center mb-4">
@@ -418,71 +422,70 @@
 			</div>
 		</section>
     <section>
-			<div class="flex justify-between space-x-3 overflow-hidden pb-10" ><!--Regions where one can acquire our services-->
+			<div class="scrollerContainer w-full md:w-5/6 overflow-hidden mx-auto [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]" data-animated>
+			<div class="locationCarousel items-center justify-between text-sm md:text-xl flex space-x-3 pb-10 w-[max-content] animate-infinite-scroll"><!--Regions where one can acquire our services-->
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap ">AN NUZHA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap ">AN NUZHA</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL MALQA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AL MALQA</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL AQIQ</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AL AQIQ</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AN NAZEEM</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AN NAZEEM</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap mr-10">AL JANADHIRIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AL JANADHIRIYA</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AN NARJIS</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AN NARJIS</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap mr-10">AS SULAIMANIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AS SULAIMANIYA</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AR RIMAL</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AR RIMAL</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL FAISALIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AL FAISALIYA</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">KING FAISAL DST</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="whitespace-nowrap">KING FAISAL DST</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">QURTUBAH</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">QURTUBAH</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL MURUJ</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="whitespace-nowrap">AL MURUJ</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL SINA'IYAH</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AL SINA'IYAH</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">DAR AL BAIDA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">DAR AL BAIDA</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL MASHAEL</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AL MASHAEL</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">AL AZIZIYAH</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AL AZIZIYAH</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">NEW INDUSTRIAL AREA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="whitespace-nowrap">HEET</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="w-14 whitespace-nowrap">HEET</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">NEW INDUSTRIAL AREA</p></span>
 				</div>
-
 			</div><!-- End of Regions where one can acquire our services-->
-
+		</div><!--End of scroller Container-->
 
 			<div class="justify-center w-full">
 				<div class="justify-center mx-auto w-60">
 					<h3 class="text-center border-b border-gray-600 text-2xl">Testimonials</h3>
 				</div>
 				
-			
 			<div class="flex justify-center w-full items-center "><!--Testimonial Container-->
 				<div class="bg-slate-300 rounded-full w-16"><!--Previous Button-->
 				<a class="hidden md:flex items-center justify-center" onclick="prevFeedback()">

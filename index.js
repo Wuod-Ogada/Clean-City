@@ -1,7 +1,6 @@
 
 showAnswer();
 orderFormPopup();
-
 //Menu on click action
 function openClose() {
    const menu = document.querySelector('#menu');
@@ -59,6 +58,38 @@ function orderFormPopup() {
    });
  });
 }
+//Modal algorithm
+/*function requestNotification() {
+   const openButton = document.querySelector('[data-open-modal]');
+   const closeButton = document.querySelector('[data-close-modal]');
+   const modal = document.querySelector('[data-modal]');
+   const confirmButton = document.querySelector(".approveRequest");
+
+   let modalHTML;
+
+   modalHTML += `<dialog data-modal>
+				<div>
+					<img src="" alt="">
+				</div>
+				<h3>Dear Esteemed Customer</h3>
+				<p>This is to confirm that your oder has been placed and it is currently being processed. Thank you for choosing US!</p>
+				<div>
+					<button data-close-modal>Close</button>
+					<button class="confirm">Approve</button>
+				</div>
+			</dialog>`;
+
+   document.querySelector(".modal").innerHTML = modalHTML;
+
+openButton.addEventListener('click', () => {
+   modal.showModal()
+})
+
+closeButton.addEventListener('click', () => {
+   modal.close();
+})
+}*/
+
 
 //Container selection and testimonials slider
 
@@ -107,7 +138,7 @@ function nextSlide(){
 //FAQ accordion onClick Action
 function showAnswer(){
 let question = document.querySelectorAll('.question');
-let chevron = document.querySelectorAll('#chevron');
+
 //let answer = document.querySelectorAll('#response');
 
 
@@ -127,7 +158,6 @@ let chevron = document.querySelectorAll('#chevron');
   question.forEach(question =>{
    question.addEventListener('click', event=>{
 
-      
       const activeQuestion = document.querySelector('.question.active');
       console.log(question);
 
@@ -138,9 +168,11 @@ let chevron = document.querySelectorAll('#chevron');
 
       question.classList.toggle('active');
       const answer = question.nextElementSibling;
+      
 
       if(question.classList.contains('active')){
          answer.classList.remove('hidden');
+         
       } else {
          answer.classList.add('hidden');
       }
@@ -150,3 +182,5 @@ let chevron = document.querySelectorAll('#chevron');
 }
 
 // Areas of operation infinite carousel
+
+
