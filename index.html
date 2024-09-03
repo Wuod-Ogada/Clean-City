@@ -5,7 +5,7 @@
     <title>Clean City</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="bg-teal-100 font-body scroll-smooth">
+<body class="bg-slate-100 font-body scroll-smooth">
 	<header class="bg-cyan-200 relative" ><!--Navigation bar -->
 		<div class="mx-7 lg:flex lg:justify-between items-center ">
 			<div class="flex items-center justify-between relative w-full lg:w-20 "><!--Logo and Menu Icon-->
@@ -39,7 +39,7 @@
 	</header><!--End of Navigation bar-->
 
 	<!--Membership Form-->
-	<div class="sign-in-popup hidden absolute w-full h-full bg-teal-100 top-0 items-center" >
+	<div class="sign-in-popup hidden absolute w-full h-full bg-teal-100 top-0 items-center transition-opacity ease-in-out duration-300 animate-fadeIn" >
 		<!--Start of form Section-->
 		<div class="w-full md:w-[80%] justify-center m-auto md:flex md:mt-[15%] relative items-center bg-teal-100">
 
@@ -68,20 +68,20 @@
 						
 					<div id="names" class=" w-3/4 mx-auto grid md:grid-cols-2 md:gap-2 items-center">
 						<div class="mb-3 whitespace-nowrap">
-							<label for="fname" class="mr-1">First name:</label><input type="text" name="fname" id="fname" placeholder="First Name" class="">
+							<label for="fname-sign-up" class="mr-1">First name:</label><input type="text" name="fname-sign-up" id="fname-sign-up" placeholder="First Name" class="border border-b-2 bg-slate-100 rounded-md pl-2">
 						</div>
 						<div class="mb-3 whitespace-nowrap">
-							<label for="sname" >Surname:</label><input type="text" name="sname" id="sname" placeholder="Surname" class="ml-2">
+							<label for="sname-sign-up" >Surname:</label><input type="text" name="sname-sign-up" id="sname-sign-up" placeholder="Surname" class="ml-2 border border-b-2 bg-slate-100 rounded-md pl-2">
 						</div>
 					</div>
 					
 					<div id="contacts" class="w-3/4 mx-auto grid md:grid-cols-2 md:gap-2 ">
 						<div class="mb-3 whitespace-nowrap">
-							<label for="address" id="address" class="mr-1">Address:</label>
-							<textarea id="address" class=""></textarea> 
+							<label for="address-sign-up" id="address-sign-up" class="mr-1">Address:</label>
+							<textarea id="address-sign-up" class="border border-b-2 bg-slate-100 rounded-md pl-2"></textarea> 
 						</div>
 						<div class="mb-3 whitespace-nowrap"> 
-							<label for="tel" class="mr-2">Telephone:</label><input type="tel" for="tel" name="tel" placeholder="Phone Number" class="mr-2">
+							<label for="tel-sign-up" class="mr-2">Telephone:</label><input type="tel" for="tel-sign-up" name="tel-sign-up" placeholder="Phone Number" class="mr-2 border border-b-2 bg-slate-100 rounded-md pl-2">
 						</div>
 					</div>		
 					
@@ -89,11 +89,11 @@
 						<div class="w-3/4 md:w-3/4 mx-auto items-center grid md:grid-cols-2 md:gap-2 ">
 							<div class="mb-3 whitespace-nowrap items-center flex" >
 								<label for="location" id="location" class="mr-1">Password:</label>
-								<input type="password" name="password" id="password" placeholder="Enter Password" class="mr-1">
+								<input type="password" name="password" id="password" placeholder="Enter Password" class="mr-1 border border-b-2 bg-slate-100 rounded-md pl-2">
 							</div>
 							<div class="whitespace-nowrap mb-3">
 								<label for="container">Confirm Password:</label>
-								<input type="password" id="confirm-password" placeholder="Confirm Password">	
+								<input type="password" id="confirm-password" placeholder="Confirm Password" class="border border-b-2 bg-slate-100 rounded-md pl-2">	
 							</div>
 						</div>	
 					</div>
@@ -112,13 +112,13 @@
 					<div id="names" class=" md:w-3/4 mx-auto items-center">
 						<div class="mb-4">
 							<label for="username" class="mr-1">Username:</label>
-							<input type="text" name="username" id="username" placeholder="Enter Username" class="">
+							<input type="text" name="username" id="username" placeholder="Enter Username" class="border border-b-2 bg-slate-100 rounded-md pl-2">
 						</div>
 					</div>
 					<div id="names" class=" md:w-3/4 mx-auto items-center">
 						<div class="mb-3 ">
 							<label for="password" class="mr-1">Password:</label>
-							<input type="password" name="password" id="password" placeholder="Enter Password" class="">
+							<input type="password" name="password" id="password" placeholder="Enter Password" class="border border-b-2 bg-slate-100 rounded-md pl-2">
 						</div>
 					</div>
 				</div><!--End of signIn Form element Wrapper-->
@@ -298,46 +298,46 @@
 			<div class="formWrapper justify-center mx-auto w-full md:w-[80%] md:h-[60%] md:mt-[10%] "><!--Form Content Wrapper-->	
 				<h3 class="text-center text-2xl mb-3">Place Your Order</h3>	
 
-				<div id="names" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 items-center">
-					<div class="mb-3 whitespace-nowrap">
-						<label for="fname" class="mr-1">First Name:</label><input type="text" name="fname" id="fname" placeholder="First Name" class="">
+				<div id="names" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 items-center ">
+					<div class="mb-3 whitespace-nowrap justify-center mx-auto">
+						<label for="fname-order" class="mr-1">First Name:</label><input type="text" name="fname-order" id="fname-order" placeholder="First Name" class="first-name border border-b-2 bg-slate-100 rounded-md pl-2">
 					</div>
-					<div class="mb-3 whitespace-nowrap">
-						<label for="sname" >Surname:</label><input type="text" name="sname" id="sname" placeholder="Surname" class="ml-2">
+					<div class="mb-3 whitespace-nowrap justify-center mx-auto">
+						<label for="sname-order" >Surname:</label><input type="text" name="sname-order" id="sname-order" placeholder="Surname" class="second-name ml-2 border border-b-2 bg-slate-100 rounded-md pl-2">
 					</div>
 				</div>
 				
 				<div id="contacts" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 ">
-					<div class="mb-3 whitespace-nowrap">
-						<label for="address" id="address" class="mr-1">Address:</label><input type="text" name="address" id="address" placeholder="Enter Address" class="mr-2">
+					<div class="mb-3 whitespace-nowrap justify-center mx-auto">
+						<label for="address-order" class="mr-1">Address:</label><input type="text" name="address-order" id="address-order" placeholder="Enter Address" class="client-address mr-2 border border-b-2 bg-slate-100 rounded-md pl-2">
 					</div>
-					<div class="mb-3 whitespace-nowrap"> 
-						<label for="tel" class="mr-2">Telephone:</label><input type="tel" for="tel" name="tel" placeholder="Phone Number" class="mr-2">
+					<div class="mb-3 whitespace-nowrap justify-center mx-auto"> 
+						<label for="tel-order" class="mr-2">Telephone:</label><input type="tel" id="tel-order" name="tel-order" placeholder="Phone Number" class="receiver-contact mr-2 border border-b-2 bg-slate-100 rounded-md pl-2">
 					</div>
 				</div>		
 				
 				<div >
 					<div class="w-3/4 mx-auto items-center grid md:grid-cols-2 gap-2 ">
-						<div class="mb-3 whitespace-nowrap items-center flex" >
-							<label for="location" id="location" class="mr-1">Location:</label><input type="text" name="location" id="location" placeholder="Add location" class="mr-1">
+						<div class="mb-3 whitespace-nowrap items-center flex justify-center mx-auto" >
+							<label for="location" id="location" class="mr-1">Location:</label><input type="text" name="location" id="location" placeholder="Add location" class="delivery-location mr-1 border border-b-2 bg-slate-100 rounded-md pl-2">
 							<a href="" class="w-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(106, 114, 114);transform:msFilter;"><circle cx="12" cy="12" r="4"></circle><path d="M13 4.069V2h-2v2.069A8.01 8.01 0 0 0 4.069 11H2v2h2.069A8.008 8.008 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path></svg></a>
 						</div>
-						<div class="whitespace-nowrap mb-3">
-							<label for="container">Container</label>
-							<select id="container">
-								<option value="container">Roll-Off Container</option>
-								<option value="container">Skip Bin</option>
-								<option value="container">Compactor: Residential</option>
-								<option value="container">Compactor: Commercial</option>
+						<div class="whitespace-nowrap mb-3 justify-center mx-auto">
+							<label for="container-options">Container</label>
+							<select id="container-options" class="container-options">
+								<option value="450" class="roll-off-container">Roll-Off Container</option>
+								<option value="350" class="skip-bin">Skip Bin</option>
+								<option value="400" class="compactor-residential">Compactor: Residential</option>
+								<option value="500" class="compactor-commercial">Compactor: Commercial</option>
 							</select>
 						</div>
 					</div>
-					<div class="Price w-full text-center"><!--appears when customer chooses container-->
-						<p>Sr:</p>
+					<div class="container-price w-full text-center"><!--appears when customer chooses container-->
+						<p>Sar:</p><span class="price"></span>
 					</div>
 				</div>
 				<div class="text-center py-3">
-					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl bg-slate-300 px-2 rounded-md cursor-pointer transform hover:scale-110 ease-in-out duration-150" data-open-modal>Place Order!</label>
+					<input type="submit" id="order" class="hidden"><label for="order" class="submit-order text-xl bg-slate-300 px-2 rounded-md cursor-pointer transform hover:scale-110 ease-in-out duration-150" data-open-modal>Place Order!</label>
 				</div>
 			</div><!--End of Form Content Wrapper-->
 			
@@ -354,24 +354,28 @@
 			<div class="sm:w-auto md:w-3/5 m-auto bg-cyan-200 p-3 rounded-md"><!--FAQ container-->
 			<h3 class="text-3xl text-center pb-4 mb-4 border-b border-b-gray-500">FAQs</h3>
 
-			<div class="faq"><!--Questions Container-->
-				<div id="faqItems">
-					<div class="question 1"><p>Can the lease period be extended?</p><a class="w-9 rotate-0 1" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+			<div class="faq space-y-2"><!--Questions Container-->
+				<div id="faqItems shadow-md shadow-b">
+					<div class="question"><p>Can the lease period be extended?</p><a class="w-9 rotate-0 1" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
-					<div class="answer hidden transition-all animate-open-dropdown" id="response"><p class="py-5">The container lease period vary depending on the model. It is difficult to guarantee a lease extension. However, it can be negotitated.</p>
+					<div class="answer hidden max-h-[120px]" id="response">
+						<p class="py-5">The container lease period vary depending on the model. It is difficult to guarantee a lease extension. However, it can be negotitated.</p>
 					</div>
 				</div>
 				
 				<div id="faqItems">
-					<div class="question 2"><p>Can a Full Container be Replaced?</p><a class="w-9 2" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+					<div class="question "><p>Can a Full Container be Replaced?</p><a class="w-9 2" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
 				</a></div>
 					<div class="answer hidden" id="response"><p class="py-5">We facilitate container replacement by taking the full containers, and placing an empty ones.</p></div>
 				</div>
 
 				<div id="faqItems">
 					<div class="question"><p >Can the container be collected before the lease period ends?</p><a class="w-9" id="chevron"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
-				</a></div>
-					<div class="answer hidden" id="response"><p class="py-5">Yes, the response we provide to our customers extends to your request to withdraw containers upon request.</p></div>
+				</a>
+				</div>
+				<div class="answer hidden" id="response">
+						<p class="py-5 ">Yes, the response we provide to our customers extends to your request to withdraw containers upon request.</p>
+					</div>
 				</div>
 
 				<div id="faqItems">
@@ -408,23 +412,29 @@
 				<div class="sm:w-11/12 md:w-3/5 m-auto mb-10">
 					<div class="flex items-center mb-4">
 						<div class="w-24 mr-6">
-					<img src="./images/onTime2.png" alt="On time">
+							<img src="./images/onTime2.png" alt="On time">
 						</div>
-					<span><p class="text-xl">We strive to offer service within the shortest time possible to attend to your needs</p></span>
+						<span>
+							<p class="text-xl">We strive to offer service within the shortest time possible to attend to your needs</p>
+						</span>
 					</div>
 
 					<div class="flex items-center mb-4">
 						<div class="w-24 mr-6">
-					<img src="./images/24.1.png" alt="24/7 Support">
+							<img src="./images/24.1.png" alt="24/7 Support">
 						</div>
-					<span><p class="text-xl">We offer around-the-clock assistance. You can reach us through our telephone line.</p></span>
+						<span>
+							<p class="text-xl">We offer around-the-clock assistance. You can reach us through our telephone line.</p>
+						</span>
 					</div>
 
 					<div class="flex items-center mb-4">
 						<div class="w-24 mr-6">
-					<img src="./images/driver-with-ai-generated-free-png.png" alt="Professionalism">
+							<img src="./images/driver-with-ai-generated-free-png.png" alt="Professionalism">
 						</div>
-					<span><p class="text-xl">Enjoy quality service and interaction from our experienced and passionate drivers.<p></span>
+						<span>
+							<p class="text-xl">Enjoy quality service and interaction from our experienced and passionate drivers.<p>
+						</span>
 					</div>
 				</div>
 			</div>
@@ -445,13 +455,13 @@
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AN NAZEEM</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap ">AL JANADHIRIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap pr-3">AL JANADHIRIYA</p></span>
 				</div>
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AN NARJIS</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AS SULAIMANIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap pr-3">AS SULAIMANIYA</p></span>
 				</div>
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AR RIMAL</p></span>
@@ -592,5 +602,6 @@
 	</div>
 	</footer>
 	<script src="./index.js"></script>
+	<!--<script src="./index1.js"></script>-->
 </body>
 </html>

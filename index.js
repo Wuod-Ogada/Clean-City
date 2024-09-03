@@ -1,63 +1,46 @@
-
 showAnswer();
-orderFormPopup();
-//Menu on click action
+
 function openClose() {
    const menu = document.querySelector('#menu');
-
-   if (menu.classList.contains('hidden'))
-   {
-      menu.classList.remove('hidden');
-   } else {
-      menu.classList.add('hidden');
-   }
-};
-
-//Forms
-
-document.querySelector('.sign-in-button').addEventListener('click', function(){
+   menu.classList.toggle('hidden');
+ }
+ 
+ document.querySelector('.sign-in-button').addEventListener('click', () => {
    document.querySelector('.sign-in-popup').classList.remove('hidden');
-});
-   
-document.querySelector('.sign-in-closer').addEventListener('click', function(){
+ });
+ 
+ document.querySelector('.sign-in-closer').addEventListener('click', () => {
    document.querySelector('.sign-in-popup').classList.add('hidden');
-});
-   
-   
-
-function orderFormPopup() {
-   let request = document.querySelectorAll('.placeOrder');
+ });
+ 
+ function orderFormPopup() {
+   const requests = document.querySelectorAll('.placeOrder');
    const orderForm = document.querySelector('.orderForm');
-   
-   
-   request.forEach(request => {
-      request.addEventListener('click', () =>{
-         
+   const closeform = document.querySelector('.close-order-form');
+ 
+   requests.forEach(request => {
+      request.addEventListener('click', () => {
          console.log('place order');
-       const activeplaceOrder = document.querySelector('.placeOrder.active');
-       const closeform = document.querySelector('.close-order-form');
-
-       if(activeplaceOrder && activeplaceOrder!==request){
+         const activePlaceOrder = document.querySelector('.placeOrder.active');
+ 
+         if (activePlaceOrder && activePlaceOrder !== request) {
+            activePlaceOrder.classList.remove('active');
+            orderForm.classList.add('hidden');
+         }
+ 
          request.classList.toggle('active');
-         orderForm.classList.add('hidden');
-       }
-
-       request.classList.add('active');
-
-       if( request.classList.contains('active')){
-         orderForm.classList.remove('hidden');
-       }
-
-       closeform.addEventListener('click', function(){
-         closeform.classList.toggle('active');
-
-       if(closeform.classList.contains('active')){
-         orderForm.classList.add('hidden'); 
-      }
+         if (request.classList.contains('active')) {
+            orderForm.classList.remove('hidden');
+         }
       });
    });
- });
-}
+ 
+   closeform.addEventListener('click', () => {
+      orderForm.classList.add('hidden');
+   });
+ }
+ 
+ orderFormPopup();
 //Modal algorithm
 /*function requestNotification() {
    const openButton = document.querySelector('[data-open-modal]');
@@ -108,30 +91,30 @@ function initializeSlider(){
    }
 }
 
-//Trigger the image in the interval to be selected and displayed.
+ //Trigger the image in the interval to be selected and displayed.
  function showImage(index){
-      //control images to reset not terminating cycle on each extreme.
-      if(index >= images.length){
-         imageIndex = 0;
-      } else if (index < 0){
-         imageIndex = images.length - 1;
-      }
+   //control images to reset not terminating cycle on each extreme.
+   if(index >= images.length){
+      imageIndex = 0;
+   } else if (index < 0){
+      imageIndex = images.length - 1;
+   }
 
-      images.forEach(image =>{
-         image.classList.add('hidden');
-      });
-      images[imageIndex].classList.remove('hidden');
- }
+   images.forEach(image =>{
+      image.classList.add('hidden');
+   });
+   images[imageIndex].classList.remove('hidden');
+}
 
 //Triggers image change on click
 function prevSlide(){
-   imageIndex--;
-   showImage(imageIndex);
+imageIndex--;
+showImage(imageIndex);
 }
 
 function nextSlide(){  
-   imageIndex++;
-   showImage(imageIndex);
+imageIndex++;
+showImage(imageIndex);
 }
 
 
@@ -139,24 +122,8 @@ function nextSlide(){
 function showAnswer(){
 let question = document.querySelectorAll('.question');
 
-//let answer = document.querySelectorAll('#response');
-
-
- /*  for (let i=0; i<faqItems.length; i++){
-      question[i].addEventListener('click', () =>{
-         
-         //question[i].classList.toggle('active');
-
-      //console.log(answer[i], chevron[i]);
-       if(answer[i].classList.contains('hidden')){
-            answer[i].classList.remove('hidden');
-         } else {
-            answer[i].classList.add('hidden');
-         }
-      });
-   } */
   question.forEach(question =>{
-   question.addEventListener('click', event=>{
+   question.addEventListener('click', () => {
 
       const activeQuestion = document.querySelector('.question.active');
       console.log(question);
@@ -181,6 +148,49 @@ let question = document.querySelectorAll('.question');
   });
 }
 
-// Areas of operation infinite carousel
+
+// creating orders
+const orderList = [];
+
+function createOrder() {
+   const fNameInput = document.querySelector('.first-name');
+   const sNameInput = document.querySelector('.second-name');
+   const telephoneInput = document.querySelector('.receiver-contact');
+   const locationInput = document.querySelector('.delivery-location');
+   const clientAddressInput = document.querySelector('.client-address');
+
+   const newOrder = {
+      firstName: fNameInput.value,
+      secondName: sNameInput.value,
+      contact: telephoneInput.value,
+      clientAddress: clientAddressInput.value,
+      deliveryLocation: locationInput.value
+   };
+
+   // Clear the form fields
+   fNameInput.value = '';
+   sNameInput.value = '';
+   telephoneInput.value = '';
+   clientAddressInput.value = '';
+   locationInput.value = '';
+
+   orderList.push(newOrder);
+   console.log(orderList);
+}
+
+document.querySelector('.submit-order').addEventListener('click', createOrder); // Ensure there's a .submit-order button
 
 
+const containerModel = document.querySelector('.container-options');
+let displayprice = '';
+
+document.addEventListener("DOMContentLoaded", updatePrice());
+
+   function updatePrice() { 
+   
+      const amount = containerModel.value;
+      document.querySelector('.price').innerHTML = amount;
+      updatePrice();
+   }
+   containerModel.addEventListener('change', updatePrice);
+   
