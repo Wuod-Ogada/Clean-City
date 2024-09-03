@@ -324,7 +324,7 @@
 						</div>
 						<div class="whitespace-nowrap mb-3 justify-center mx-auto">
 							<label for="container-options">Container</label>
-							<select id="container-options" class="container-options">
+							<select id="container-options" class="container-options" onchange="updatePrice()">
 								<option value="450" class="roll-off-container">Roll-Off Container</option>
 								<option value="350" class="skip-bin">Skip Bin</option>
 								<option value="400" class="compactor-residential">Compactor: Residential</option>
@@ -440,8 +440,8 @@
 			</div>
 		</section>
     <section>
-			<div class="scrollerContainer w-full md:w-5/6 overflow-hidden mx-auto [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]" data-animated>
-			<div class="locationCarousel items-center justify-between text-sm md:text-xl flex space-x-3 pb-10 w-[max-content] animate-infinite-scroll"><!--Regions where one can acquire our services-->
+			<div class="scrollerContainer w-full md:w-5/6 overflow-hidden mx-auto [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] " data-animated>
+			<div class="locationCarousel bg-green-100 items-center justify-between text-sm md:text-xl flex space-x-3 pb-10 w-[max-content] animate-infinite-scroll"><!--Regions where one can acquire our services-->
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap ">AN NUZHA</p></span>
 				</div>

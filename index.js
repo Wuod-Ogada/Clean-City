@@ -41,6 +41,16 @@ function openClose() {
  }
  
  orderFormPopup();
+
+ const containerModel = document.querySelector('.container-options');
+let displayprice = '';
+
+   function updatePrice() { 
+      const amount = containerModel.value;
+      document.querySelector('.price').innerHTML = amount;
+      updatePrice();
+   }
+
 //Modal algorithm
 /*function requestNotification() {
    const openButton = document.querySelector('[data-open-modal]');
@@ -148,7 +158,6 @@ let question = document.querySelectorAll('.question');
   });
 }
 
-
 // creating orders
 const orderList = [];
 
@@ -181,16 +190,3 @@ function createOrder() {
 document.querySelector('.submit-order').addEventListener('click', createOrder); // Ensure there's a .submit-order button
 
 
-const containerModel = document.querySelector('.container-options');
-let displayprice = '';
-
-document.addEventListener("DOMContentLoaded", updatePrice());
-
-   function updatePrice() { 
-   
-      const amount = containerModel.value;
-      document.querySelector('.price').innerHTML = amount;
-      updatePrice();
-   }
-   containerModel.addEventListener('change', updatePrice);
-   
