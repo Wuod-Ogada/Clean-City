@@ -189,4 +189,6 @@ function createOrder() {
 
 document.querySelector('.submit-order').addEventListener('click', createOrder); // Ensure there's a .submit-order button
 
+let feedback = document.querySelectorAll('.feedback');
 
+console.log(feedback);

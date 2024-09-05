@@ -147,19 +147,21 @@
 
 	</section>
 
-    <section class="m-10 md:flex "><!--Services provided and Customer responsibilities-->
-		<div class="bg-cyan-200 rounded-xl p-3"><h3 class="text-3xl">company duties:</h3>
+    <section class="w-full md:flex md:px-5"><!--Services provided and Customer responsibilities-->
+		<div class="w-full bg-cyan-200 rounded-xl p-3 md:w-[40%]">
+			<h3 class="text-3xl">company duties:</h3>
 		<ul>
 			<li><h5 class="topic"> Advise</h5><p class="topicsentence">We provide honest guidance to select the best container for your needs.</p></li>
 			<li><h5 class="topic">Container Delivery</h5><p class="topicsentence"> We aim to deliver the container within the scheduled period.</p></li>
 			<li><h5 class="topic">Empty container</h5><p class="topicsentence">Carry the full containers and empty it.</p></li>
 		</ul>
-		</div><!--How we provide services and what customers are to expect-->
-
-		<div class=" my-4 w-64">
-			<img  src=".//images/Trashcan1.png" alt="bin">
 		</div>
-		<div class="col-span-1 ml-4 bg-cyan-200 p-3 rounded-lg">
+
+		<div class="w-full my-4 md:w-64">
+			<img src=".//images/Trashcan1.png" alt="bin" class="w-52 mx-auto my-5">
+		</div>
+
+		<div class="col-span-1 bg-cyan-200 p-3 rounded-lg sm:w-full md:w-[40%]">
 			<h4 class="text-3xl">Customer responsibilities:</h4>
 			<ul>
 				<li><h6 class="topic">Accurate Location</h6><p class="topicsentence">it is your duty to share with us accurate location.</p></li>
@@ -207,7 +209,7 @@
 						</div>
 						<div class="flex justify-between text-xl py-5 mx-6">
 						<a>Price:<span class="font-semibold">Sr.450</span></a>
-						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
+						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm transition ease-in-out duration-200 hover:scale-x-105 shadow-md shadow-slate-500/50">Order</a>
 						</div>
 					</div><!--End of Description-->	
 				</div><!--End of Card-->
@@ -238,7 +240,7 @@
 						</div>
 						<div class="flex justify-between text-xl py-5 mx-6">
 						<a>Price:<span class="font-semibold">Sr.350</span></a>
-						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
+						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm transition ease-in-out duration-200 hover:scale-x-105 shadow-md shadow-slate-500/50">Order</a>
 						</div>
 					</div><!--End of Description-->	
 			</div><!--End of Card-->
@@ -270,7 +272,7 @@
 						</div>
 						<div class="flex justify-between text-xl py-5 mx-6">
 						<a>Price:<span class="font-semibold">Sr.400 or sr.500</span></a>
-						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm shadow-sm transition ease-in-out duration-200 hover:scale-x-105">Order</a>
+						<a class="placeOrder cursor-pointer px-3 bg-slate-300 rounded-sm transition ease-in-out duration-200 hover:scale-x-105 shadow-md shadow-slate-500/50">Order</a>
 						</div>
 					</div><!--End of Description-->	
 			</div><!--End of Card-->
@@ -325,6 +327,7 @@
 						<div class="whitespace-nowrap mb-3 justify-center mx-auto">
 							<label for="container-options">Container</label>
 							<select id="container-options" class="container-options" onchange="updatePrice()">
+								<option value="Choose a container" class="roll-off-container">Choose a Container</option>
 								<option value="450" class="roll-off-container">Roll-Off Container</option>
 								<option value="350" class="skip-bin">Skip Bin</option>
 								<option value="400" class="compactor-residential">Compactor: Residential</option>
@@ -337,7 +340,7 @@
 					</div>
 				</div>
 				<div class="text-center py-3">
-					<input type="submit" id="order" class="hidden"><label for="order" class="submit-order text-xl bg-slate-300 px-2 rounded-md cursor-pointer transform hover:scale-110 ease-in-out duration-150" data-open-modal>Place Order!</label>
+					<input type="submit" id="order" class="hidden"><label for="order" class="submit-order text-xl bg-slate-300 px-2 rounded-md cursor-pointer transform hover:scale-110 ease-in-out duration-150 shadow-md shadow-slate-500" data-open-modal>Place Order!</label>
 				</div>
 			</div><!--End of Form Content Wrapper-->
 			
@@ -455,13 +458,13 @@
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AN NAZEEM</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap mr-3">AL JANADHIRIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap mr-[20px]">AL JANADHIRIYA</p></span>
 				</div>
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AN NARJIS</p></span>
 				</div>
 				<div class="locale">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap mr-3">AS SULAIMANIYA</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap mr-[20px]">AS SULAIMANIYA</p></span>
 				</div>
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AR RIMAL</p></span>
@@ -470,7 +473,7 @@
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">AL FAISALIYA</p></span>
 				</div>
 				<div class="locale ml-2">
-					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="whitespace-nowrap">KING FAISAL DST</p></span>
+					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class="whitespace-nowrap mr-[20px]">KING FAISAL DST</p></span>
 				</div>
 				<div class="locale">
 					<img class="w-10 m-2" src="./images/pin1.png" alt="Location"><span><p class=" whitespace-nowrap">QURTUBAH</p></span>
@@ -516,39 +519,39 @@
 				<div class="flex md:justify-between lg:justify-center overflow-hidden h-[250px] "><!--Begin of Testimonials-->
 				<div class="feedback">
 					<div class="thumbnail">
-						<img src="./images/user.png">
+						<img src="./images/user.png" class="thumbnail-img">
 					</div>
 					<div class="customerOpinion">
-						<p><em>They were punctual. The driver arrived sooner than I anticipated. there was no delay as workers were already present. Thank You!</em></p>
+						<p><em>"They were punctual. The driver arrived sooner than I anticipated. there was no delay as workers were already present. Thank You!"</em></p>
 					</div>
 				</div>
 				<div class="feedback">
 					<div class="thumbnail">
-						<img src="./images/user.png">
+						<img src="./images/user.png" class="thumbnail-img">
 					</div>
 					<div class="customerOpinion">
-						<p><em>I highly recommend to order from this company. They adhered to my plea for urgently needing a container at a construction site.</em></p>
+						<p><em>"I highly recommend to order from this company. They adhered to my plea for urgently needing a container at a construction site."</em></p>
 					</div>
 				</div>
 				<div class="feedback">
 					<div class="thumbnail">
-						<img src="./images/user.png">
+						<img src="./images/user.png" class="thumbnail-img">
 					</div>
 					<div class="customerOpinion">
-						<p><em>Let's talk Professionalism. The driver placed the container as instructed and adviced me on the repercussions and risks of the containers not being properly placed.</em></p>
+						<p><em>"Let's talk Professionalism. The driver placed the container as instructed and adviced me on the repercussions and risks of the containers not being properly placed."</em></p>
 					</div>
 				</div>
 				<div class="feedback">
 					<div class="thumbnail">
-						<img src="./images/user.png">
+						<img src="./images/user.png" class="thumbnail-img">
 					</div>
 					<div class="customerOpinion">
-						<p><em>They were kind enough to approve my request to ask for a big container even after changing my request upon recieving my previous container.</em></p>
+						<p><em>"They were kind enough to approve my request to ask for a big container even after changing my request upon recieving my previous container."</em></p>
 					</div>
 				</div>
 				<div class="feedback">
 					<div class="thumbnail">
-						<img src="./images/user.png">
+						<img src="./images/user.png" class="thumbnail-img">
 					</div>
 					<div class="customerOpinion">
 						<p><em>Fast, deligent and reliable. What else can one ask for?</em></p>
@@ -574,7 +577,7 @@
 			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#home">Home</a></li>
 			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#aboutUsSection">About Us</a></li>
 			<li><a class="px-2 py-0.5 text-base hover:border-b  hover: border-gray-600" href="#faqSection">FAQs</a></li>
-			<li><a class="order-button rounded-full bg-slate-400 px-2 my-1 transform transition-all ease-in-out duration-150 hover:scale-x-50" href="#containerSection">Order NOW!</a></li>
+			<li><a class="order-button rounded-full bg-slate-400 px-2 my-1 transform transition-all ease-in-out duration-150 hover:scale-x-50 shadow-md shadow-slate-500/60" href="#containerSection">Order NOW!</a></li>
 			</ul>
 		</div>
 		<div class="py-7 md:py-5 text-lg"><!--CLocation and Contacts-->
