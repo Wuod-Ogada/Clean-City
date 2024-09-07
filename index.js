@@ -13,6 +13,23 @@ function openClose() {
    document.querySelector('.sign-in-popup').classList.add('hidden');
  });
  
+const switchtoregitration = document.querySelector('.switch-to-signUp');
+const registrationForm = document.getElementById('registration-form');
+const signinForm = document.getElementById('sign-in-form');
+const switchToSignIn = document.querySelector('.switch-to-signIn');
+
+switchtoregitration.addEventListener('click', () => {
+   registrationForm.classList.toggle('hidden');
+   signinForm.classList.add('hidden');
+});
+
+switchToSignIn.addEventListener('click', () => {
+   signinForm.classList.remove('hidden');
+   registrationForm.classList.toggle('hidden');
+});
+ 
+
+
  function orderFormPopup() {
    const requests = document.querySelectorAll('.placeOrder');
    const orderForm = document.querySelector('.orderForm');

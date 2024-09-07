@@ -60,28 +60,34 @@
 			</div>
 
 			<!--Start of Registration Form-->
-			<div class="bg-emerald-200 w-full items-center transition-opacity ease-in-out duration-300 animate-fadeIn">
+			<div class="bg-emerald-200 w-full items-center transition-opacity ease-in-out duration-300 animate-fadeIn rounded-md shadow-md shadow-green-400/60">
 				
-				<form id="registrationForm" action="" class="hidden w-full h-full md:w-3/4 mx-auto justify-center p-3 rounded-md my-auto">
-					<h3 class="text-center text-2xl mb-2">Sign In</h3>
+				<form id="registration-form" action="" class="hidden w-full h-full md:w-3/4 mx-auto justify-center p-3  my-auto ">
+					<h3 class="text-center text-2xl mb-2">Sign Up</h3>
 				<div class="formWrapper justify-center mx-auto w-full my-4"><!--Form Content Wrapper-->	
 						
 					<div id="names" class=" w-3/4 mx-auto grid md:grid-cols-2 md:gap-2 items-center">
 						<div class="mb-3 whitespace-nowrap">
-							<label for="fname-sign-up" class="mr-1">First name:</label><input type="text" name="fname-sign-up" id="fname-sign-up" placeholder="First Name" class="border border-b-2 bg-slate-100 rounded-md pl-2">
+							<label for="user-name-sign-up" >Username:</label><input type="text" name="user-name-sign-up" id="user-name-sign-up" placeholder="" class="ml-2 border border-b-2 bg-slate-100 rounded-md pl-2" required>
+						</div>
+					</div>
+
+					<div id="names" class=" w-3/4 mx-auto grid md:grid-cols-2 md:gap-2 items-center">
+						<div class="mb-3 whitespace-nowrap">
+							<label for="fname-sign-up" class="mr-1">First name:</label><input type="text" name="fname-sign-up" id="fname-sign-up" placeholder="First Name" class="border border-b-2 bg-slate-100 rounded-md pl-2" required>
 						</div>
 						<div class="mb-3 whitespace-nowrap">
-							<label for="sname-sign-up" >Surname:</label><input type="text" name="sname-sign-up" id="sname-sign-up" placeholder="Surname" class="ml-2 border border-b-2 bg-slate-100 rounded-md pl-2">
+							<label for="sname-sign-up" >Surname:</label><input type="text" name="sname-sign-up" id="sname-sign-up" placeholder="Surname" class="ml-2 border border-b-2 bg-slate-100 rounded-md pl-2" required>
 						</div>
 					</div>
 					
 					<div id="contacts" class="w-3/4 mx-auto grid md:grid-cols-2 md:gap-2 ">
 						<div class="mb-3 whitespace-nowrap">
 							<label for="address-sign-up" id="address-sign-up" class="mr-1">Address:</label>
-							<textarea id="address-sign-up" class="border border-b-2 bg-slate-100 rounded-md pl-2"></textarea> 
+							<textarea id="address-sign-up" class="border border-b-2 bg-slate-100 rounded-md pl-2" required></textarea> 
 						</div>
 						<div class="mb-3 whitespace-nowrap"> 
-							<label for="tel-sign-up" class="mr-2">Telephone:</label><input type="tel" for="tel-sign-up" name="tel-sign-up" placeholder="Phone Number" class="mr-2 border border-b-2 bg-slate-100 rounded-md pl-2">
+							<label for="tel-sign-up" class="mr-2">Telephone:</label><input type="tel" for="tel-sign-up" name="tel-sign-up" placeholder="Phone Number" class="mr-2 border border-b-2 bg-slate-100 rounded-md pl-2" required>
 						</div>
 					</div>		
 					
@@ -89,42 +95,42 @@
 						<div class="w-3/4 md:w-3/4 mx-auto items-center grid md:grid-cols-2 md:gap-2 ">
 							<div class="mb-3 whitespace-nowrap items-center flex" >
 								<label for="location" id="location" class="mr-1">Password:</label>
-								<input type="password" name="password" id="password" placeholder="Enter Password" class="mr-1 border border-b-2 bg-slate-100 rounded-md pl-2">
+								<input type="password" name="password" id="password" placeholder="Enter Password" class="mr-1 border border-b-2 bg-slate-100 rounded-md pl-2" required>
 							</div>
 							<div class="whitespace-nowrap mb-3">
 								<label for="container">Confirm Password:</label>
-								<input type="password" id="confirm-password" placeholder="Confirm Password" class="border border-b-2 bg-slate-100 rounded-md pl-2">	
+								<input type="password" id="confirm-password" placeholder="Confirm Password" class="border border-b-2 bg-slate-100 rounded-md pl-2" required>	
 							</div>
 						</div>	
 					</div>
 				</div><!--End of Form Content Wrapper-->
 				<div class="text-center my-3 ">
-					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl cursor-pointer bg-slate-400 px-5 py-1 rounded-md cursor" >Register!</label>
+					<input type="submit" id="registration" class="hidden"><label for="registration" class="text-xl cursor-pointer bg-slate-400 px-5 py-1 rounded-md cursor" >Register!</label>
 					<p class="my-2"><a href="#signInForm" class="switch-to-signIn text-cyan-900 hover:text-lime-500">Already have an account? Sign In</a></p>
 				</div>
 				</form><!--End of Registration Form-->
 
 				<!--Start of Sign In Form-->
-				<form id="signInForm" action="" class=" w-3/4 mx-auto justify-center bg-emerald-200 p-3 rounded-md relative h-full">
+				<form id="sign-in-form" action="" class=" w-3/4 mx-auto justify-center bg-emerald-200 p-3 rounded-md relative h-full">
 					
 				<div class="formWrapper justify-center mx-auto w-[50%] mt-[45%] md:mt-0"><!--Form Content Wrapper-->
-					<h3 class="text-center text-2xl mb-2">Sign Up</h3>
+					<h3 class="text-center text-2xl mb-2">Welcome!</h3>
 					<div id="names" class=" md:w-3/4 mx-auto items-center">
 						<div class="mb-4">
 							<label for="username" class="mr-1">Username:</label>
-							<input type="text" name="username" id="username" placeholder="Enter Username" class="border border-b-2 bg-slate-100 rounded-md pl-2">
+							<input type="text" name="username" id="username" placeholder="Enter Username" class="border border-b-2 bg-slate-100 rounded-md pl-2" required>
 						</div>
 					</div>
 					<div id="names" class=" md:w-3/4 mx-auto items-center">
 						<div class="mb-3 ">
 							<label for="password" class="mr-1">Password:</label>
-							<input type="password" name="password" id="password" placeholder="Enter Password" class="border border-b-2 bg-slate-100 rounded-md pl-2">
+							<input type="password" name="password" id="password" placeholder="Enter Password" class="border border-b-2 bg-slate-100 rounded-md pl-2" required>
 						</div>
 					</div>
 				</div><!--End of signIn Form element Wrapper-->
 				<div class="text-center my-3">
-					<input type="submit" id="order" class="hidden"><label for="order" class="text-xl" >Sign In</label>
-					<p><a href="#signInForm" class="switch-to-signIn">Don't have an account? Register</a></p>
+					<input type="submit" id="sign-in" class="hidden"><label for="sign-in" class="text-xl bg-slate-400 px-3 rounded-md shadow-md shadow-gray-600/40" >Sign In</label>
+					<p><a href="#signInForm" class="switch-to-signUp  text-cyan-900 hover:text-lime-500">Don't have an account? Register</a></p>
 				</div>
 				</form><!--End of Sign In form-->
 			</div>
@@ -302,31 +308,31 @@
 
 				<div id="names" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 items-center ">
 					<div class="mb-3 whitespace-nowrap justify-center mx-auto">
-						<label for="fname-order" class="mr-1">First Name:</label><input type="text" name="fname-order" id="fname-order" placeholder="First Name" class="first-name border border-b-2 bg-slate-100 rounded-md pl-2">
+						<label for="fname-order" class="mr-1">First Name:</label><input type="text" name="fname-order" id="fname-order" placeholder="First Name" class="first-name border border-b-2 bg-slate-100 rounded-md pl-2" required>
 					</div>
 					<div class="mb-3 whitespace-nowrap justify-center mx-auto">
-						<label for="sname-order" >Surname:</label><input type="text" name="sname-order" id="sname-order" placeholder="Surname" class="second-name ml-2 border border-b-2 bg-slate-100 rounded-md pl-2">
+						<label for="sname-order" >Surname:</label><input type="text" name="sname-order" id="sname-order" placeholder="Surname" class="second-name ml-2 border border-b-2 bg-slate-100 rounded-md pl-2" required>
 					</div>
 				</div>
 				
 				<div id="contacts" class="w-3/4 mx-auto grid md:grid-cols-2 gap-2 ">
 					<div class="mb-3 whitespace-nowrap justify-center mx-auto">
-						<label for="address-order" class="mr-1">Address:</label><input type="text" name="address-order" id="address-order" placeholder="Enter Address" class="client-address mr-2 border border-b-2 bg-slate-100 rounded-md pl-2">
+						<label for="address-order" class="mr-1">Address:</label><input type="text" name="address-order" id="address-order" placeholder="Enter Address" class="client-address mr-2 border border-b-2 bg-slate-100 rounded-md pl-2" required>
 					</div>
 					<div class="mb-3 whitespace-nowrap justify-center mx-auto"> 
-						<label for="tel-order" class="mr-2">Telephone:</label><input type="tel" id="tel-order" name="tel-order" placeholder="Phone Number" class="receiver-contact mr-2 border border-b-2 bg-slate-100 rounded-md pl-2">
+						<label for="tel-order" class="mr-2">Telephone:</label><input type="tel" id="tel-order" name="tel-order" placeholder="Phone Number" class="receiver-contact mr-2 border border-b-2 bg-slate-100 rounded-md pl-2" required>
 					</div>
 				</div>		
 				
 				<div >
 					<div class="w-3/4 mx-auto items-center grid md:grid-cols-2 gap-2 ">
 						<div class="mb-3 whitespace-nowrap items-center flex justify-center mx-auto" >
-							<label for="location" id="location" class="mr-1">Location:</label><input type="text" name="location" id="location" placeholder="Add location" class="delivery-location mr-1 border border-b-2 bg-slate-100 rounded-md pl-2">
+							<label for="location" id="location" class="mr-1">Location:</label><input type="text" name="location" id="location" placeholder="Add location" class="delivery-location mr-1 border border-b-2 bg-slate-100 rounded-md pl-2" required>
 							<a href="" class="w-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(106, 114, 114);transform:msFilter;"><circle cx="12" cy="12" r="4"></circle><path d="M13 4.069V2h-2v2.069A8.01 8.01 0 0 0 4.069 11H2v2h2.069A8.008 8.008 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path></svg></a>
 						</div>
 						<div class="whitespace-nowrap mb-3 justify-center mx-auto">
 							<label for="container-options">Container</label>
-							<select id="container-options" class="container-options" onchange="updatePrice()">
+							<select id="container-options" class="container-options" onchange="updatePrice()" required>
 								<option value="Choose a container" class="roll-off-container">Choose a Container</option>
 								<option value="450" class="roll-off-container">Roll-Off Container</option>
 								<option value="350" class="skip-bin">Skip Bin</option>
@@ -516,7 +522,7 @@
 				</a>
 				</div><!--End of Previous Button-->
 
-				<div class="flex md:justify-between lg:justify-center overflow-hidden h-[250px] "><!--Begin of Testimonials-->
+				<div class="flex md:justify-between lg:justify-center overflow-hidden h-[250px]" data-display-d="3" data-display-t="2" data-display-m="1"><!--Begin of Testimonials-->
 				<div class="feedback">
 					<div class="thumbnail">
 						<img src="./images/user.png" class="thumbnail-img">
