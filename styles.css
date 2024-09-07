@@ -742,6 +742,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-\[15\%\]{
+  margin-top: 15%;
+}
+
 .mt-\[45\%\]{
   margin-top: 45%;
 }
@@ -1185,6 +1189,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.shadow-slate-600\/40{
+  --tw-shadow-color: rgb(71 85 105 / 0.4);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1417,6 +1426,10 @@ video {
     display: flex;
   }
 
+  .md\:grid{
+    display: grid;
+  }
+
   .md\:h-\[60\%\]{
     height: 60%;
   }
@@ -1459,6 +1472,14 @@ video {
 
   .md\:gap-2{
     gap: 0.5rem;
+  }
+
+  .md\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .md\:whitespace-nowrap{
+    white-space: nowrap;
   }
 
   .md\:px-20{
@@ -1536,6 +1557,10 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:whitespace-nowrap{
+    white-space: nowrap;
   }
 
   .lg\:text-2xl{
