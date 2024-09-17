@@ -702,10 +702,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-\[20px\]{
-  margin-bottom: 20px;
-}
-
 .ml-10{
   margin-left: 2.5rem;
 }
@@ -769,6 +765,14 @@ video {
 
 .h-0{
   height: 0px;
+}
+
+.h-24{
+  height: 6rem;
+}
+
+.h-96{
+  height: 24rem;
 }
 
 .h-\[250px\]{
@@ -840,6 +844,10 @@ video {
   width: 100%;
 }
 
+.w-\[95\%\]{
+  width: 95%;
+}
+
 .rotate-0{
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -860,7 +868,7 @@ video {
 }
 
 .animate-fadeIn{
-  animation: fadeIn 2s ease-in-out linear;
+  animation: fadeIn 3s ease-in-out linear;
 }
 
 @keyframes infinite-scroll{
@@ -879,6 +887,20 @@ video {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.cursor-grabbing{
+  cursor: grabbing;
+}
+
+.cursor-grab{
+  cursor: grab;
+}
+
+.select-none{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .items-center{
@@ -1320,9 +1342,9 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
   .feedback{
-    width: 24rem;
+    min-width: 24rem;
   }
 }
 
@@ -1426,12 +1448,12 @@ video {
     display: flex;
   }
 
-  .md\:grid{
-    display: grid;
-  }
-
   .md\:h-\[60\%\]{
     height: 60%;
+  }
+
+  .md\:w-11\/12{
+    width: 91.666667%;
   }
 
   .md\:w-3\/4{
@@ -1440,10 +1462,6 @@ video {
 
   .md\:w-3\/5{
     width: 60%;
-  }
-
-  .md\:w-5\/6{
-    width: 83.333333%;
   }
 
   .md\:w-64{
@@ -1456,6 +1474,10 @@ video {
 
   .md\:w-\[80\%\]{
     width: 80%;
+  }
+
+  .md\:w-\[95\%\]{
+    width: 95%;
   }
 
   .md\:grid-cols-2{
@@ -1472,14 +1494,6 @@ video {
 
   .md\:gap-2{
     gap: 0.5rem;
-  }
-
-  .md\:gap-5{
-    gap: 1.25rem;
-  }
-
-  .md\:whitespace-nowrap{
-    white-space: nowrap;
   }
 
   .md\:px-20{
@@ -1543,10 +1557,6 @@ video {
 
   .lg\:w-\[75\%\]{
     width: 75%;
-  }
-
-  .lg\:justify-center{
-    justify-content: center;
   }
 
   .lg\:justify-between{

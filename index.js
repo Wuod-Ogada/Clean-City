@@ -114,7 +114,7 @@ closeButton.addEventListener('click', () => {
 function initializeSlider(){
    if(images.length>0){
       images[imageIndex].classList.remove('hidden');
-      intervalId = setInterval();
+      //intervalId = setInterval();
    }
 }
 
@@ -176,7 +176,10 @@ let question = document.querySelectorAll('.question');
 }
 
 // creating orders
-const orderList = [];
+document.addEventListener('DOMContentLoaded', newOrder());
+
+function newOrder() {
+   const orderList = [];
 
 function createOrder() {
    const fNameInput = document.querySelector('.first-name');
@@ -206,6 +209,46 @@ function createOrder() {
 
 document.querySelector('.submit-order').addEventListener('click', createOrder); // Ensure there's a .submit-order button
 
-let feedback = document.querySelectorAll('.feedback');
+} 
 
-console.log(feedback);
+
+//Feedback slider
+const feedbackCarousel = document.querySelector('.feedback-container');
+const arrowBtns = document.querySelectorAll('.feedback-btn');
+const firstfeedbackCard = feedbackCarousel.querySelector('.feedback').offsetWidth;
+
+
+arrowBtns.forEach(btn =>{
+   btn.addEventListener("click", () => {
+      console.log(btn.id);
+      feedbackCarousel.scrollLeft += btn.id === "left" ? - firstfeedbackCard : firstfeedbackCard;
+   });
+});
+
+
+let isDragging = false, startX, startScrollLeft;
+
+const dragStart = (e) => {
+   isDragging = true;
+   feedbackCarousel.classList.add('dragging');
+   //Records Initial position of cursor and scroll position of the carousel
+   startX = e.pageX;
+   startScrollLeft = feedbackCarousel.scrollLeft;
+}
+
+const dragging = (e) => {
+   if(!isDragging) return;
+
+   //Update the carousel's scroll position according to cursor movement
+  feedbackCarousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+   isDragging = false;
+   feedbackCarousel.classList.remove('dragging');
+}
+
+
+feedbackCarousel.addEventListener('mousedown', dragStart);
+feedbackCarousel.addEventListener('mousemove', dragging);
+feedbackCarousel.addEventListener('mouseup', dragStop);
